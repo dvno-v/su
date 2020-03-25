@@ -84,12 +84,12 @@ Person Car::get_owner() const{
 }
 
 void Car::print_car() const{
-    std::cout << this->print_car << " " << this->colour << " " << '\n';
+    std::cout << this->brand << " " << this->colour << " " << '\n';
     owner.print_person();  
 }
 
 bool Car::if_owner_can_drive()const{
-    return this->owner.get_if_licence;
+    return this->owner.get_if_licence();
 }
 
 #endif // !__CAR_CPP

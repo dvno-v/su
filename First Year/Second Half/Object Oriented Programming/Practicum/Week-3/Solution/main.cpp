@@ -1,17 +1,29 @@
 #include <iostream>
-#include "Person.cpp"
+#include "Parking.cpp"
 
 
 int main(){
-    char name[] = "gosho";
-    Person a(name, 12, false);
+    char name[] = "Goshi",
+    brand[] = "fiat",
+    brand2[] = "fiataaaa",
+    brand3[] = "fiatbbbb",
+    brand4[] = "fiacccct",
+    licence_plate[] = "1234",
+    colour[] = "white",
+    fname[] = "mobilebg";
+    int age = 19;
+    bool has_licence = true;
+    Person gosho(name, age, has_licence);
+    Car punto(brand, licence_plate, colour, gosho);
+    // punto.print_car();
 
-    Person b(a);
+    Car* cars = new Car[1];
+    cars[0] = punto;
+    Parking park(fname, gosho, cars, 1, 3);
+    Car ne_punto(brand2, brand3, brand4, gosho);
 
-    b.print_person();
-
-    std::cout << (a == b);
-    
-
+    park.add_car(ne_punto);
+    park.del_car(1);
+    park.print_all();
     return 0;
 }
