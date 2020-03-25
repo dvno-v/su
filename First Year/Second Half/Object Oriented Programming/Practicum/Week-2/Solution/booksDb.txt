@@ -1,0 +1,26 @@
+5
+Harry Potter and the Philosopher's Stone
+J.K. Rowling
+fantasy
+15.00
+150000
+Metro 2033
+Dmitrii Gluhovski
+apocalypse
+25.00
+160000
+Forsaken:Assassin's Creed
+Anthon Jhil
+fantasy
+22.40
+179000
+The Adventures of Huckleberry Finn
+Mark Twain
+fantasy
+19.60
+1820
+Alice's Adventures in Wonderland
+Lewis Carroll
+fantasy
+14.69
+154880

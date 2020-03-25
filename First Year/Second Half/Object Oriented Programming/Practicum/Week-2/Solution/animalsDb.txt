@@ -1,0 +1,13 @@
+4
+mamal
+lion
+12
+mamal
+platypus
+5
+mamal
+panda
+9
+reptile
+chameleon
+20
