@@ -18,8 +18,10 @@ int main() {
     a.print();
     std::cout << a.pop() << "  " << a.pop() << " " << a.unshift() << "  " << a.unshift() << "\n";
     a.print();
-    Vector<double> b(a), c = b;
+    double arr[] = {2.1, 3, 3, 4.1};
+    Vector<double> b(a), c = b, d(arr, 4);
     b.print();
     c.print();
+    d.print();
     return 0;
 }

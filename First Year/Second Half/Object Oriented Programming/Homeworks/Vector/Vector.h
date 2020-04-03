@@ -9,7 +9,7 @@ template <typename T>
 class Vector {
 public:
     Vector();
-    Vector(T*, unsigned);
+    Vector(T*, const unsigned&);
     Vector(const Vector&);
     ~Vector();
 
@@ -44,8 +44,8 @@ private:
     unsigned size;
 
     void del_memory();
-    void copy_memory(T*, unsigned);
-    T* copy_and_resize(T*, unsigned, unsigned);
+    void copy_memory(T*, const unsigned&);
+    T* copy_and_resize(T*,const unsigned&, const unsigned&);
 };
 
 #endif //!__VECTOR_H

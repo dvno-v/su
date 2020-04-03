@@ -16,7 +16,7 @@ void Vector<T>::del_memory() {
 }
 
 template <typename T>
-void Vector<T>::copy_memory(T*_data, unsigned _data_size) {
+void Vector<T>::copy_memory(T*_data, const unsigned& _data_size) {
     this->del_memory();
     this->data = new T[_data_size];
 
@@ -26,7 +26,7 @@ void Vector<T>::copy_memory(T*_data, unsigned _data_size) {
 }
 
 template<typename T>
-T *Vector<T>::copy_and_resize(T* _source, unsigned new_size, unsigned old_size) {
+T *Vector<T>::copy_and_resize(T* _source, const unsigned& new_size, const unsigned& old_size) {
     T* temp = new T[new_size];
     for (int i = 0; i < std::min(new_size, old_size) ; ++i) {
         temp[i] = _source[i];
@@ -41,7 +41,7 @@ Vector<T>::Vector() {
 }
 
 template <typename T>
-Vector<T>::Vector(T* _data, unsigned _data_size) {
+Vector<T>::Vector(T* _data, const unsigned& _data_size) {
     this->copy_memory(_data, _data_size);
     this->size = _data_size;
 }
