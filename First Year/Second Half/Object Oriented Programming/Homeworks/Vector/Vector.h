@@ -15,7 +15,6 @@ public:
 
     T* get_data();
     unsigned get_size();
-    unsigned get_capacity();
 
     T* beggining();
     T* end();
@@ -42,7 +41,6 @@ public:
 private:
     T* data;
     unsigned size;
-    unsigned capacity;
 
     void del_memory();
     void copy_memory(T*, unsigned);

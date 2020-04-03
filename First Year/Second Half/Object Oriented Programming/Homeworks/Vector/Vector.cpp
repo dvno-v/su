@@ -29,21 +29,18 @@ template <typename T>
 Vector<T>::Vector() {
     this->data = nullptr;
     this->size = 0;
-    this->capacity = 0;
 }
 
 template <typename T>
 Vector<T>::Vector(T* _data, unsigned _data_size) {
     this->copy_memory(_data, _data_size);
     this->size = _data_size;
-    this->capacity = 2*_data_size;
 }
 
 template <typename T>
 Vector<T>::Vector(const Vector & _other) {
     this->copy_memory(_other.data, _other.size);
     this->size = _other.size;
-    this->capacity = _other.capacity;
 }
 
 
@@ -59,11 +56,11 @@ void Vector<T>::print() {
         for (int i = 0; i < this->size; ++i) {
             std::cout << this->data[i] << " ";
         }
+        std::cout << '\n';
     }
     else{
         std::cout << "Empty\n";
     }
-    std::cout << '\n';
 }
 
 template<typename T>
@@ -74,11 +71,6 @@ T *Vector<T>::get_data() {
 template<typename T>
 unsigned Vector<T>::get_size() {
     return this->size;
-}
-
-template<typename T>
-unsigned Vector<T>::get_capacity() {
-    return this->capacity;
 }
 
 template<typename T>
@@ -114,7 +106,6 @@ void Vector<T>::assign(const int & amount, const T & value) {
         this->data[i] = value;
     }
     this->size = amount;
-    this->capacity = 2 * amount;
 }
 
 template<typename T>
@@ -126,14 +117,10 @@ void Vector<T>::assign(const T * start ,const T * end) {
         this->data[i] = *(start + i);
     }
     this->size = amount;
-    this->capacity = amount * 2;
 }
 
 template<typename T>
 void Vector<T>::push(const T & new_el) {
-   if(this->size >= this->capacity){
-       this->capacity *= 2;
-   }
     T* temp = new T[this->size + 1];
     for (int i = 0; i < this->size; ++i) {
         temp[i] = this->data[i];
@@ -141,7 +128,7 @@ void Vector<T>::push(const T & new_el) {
     temp[this->size] = new_el;
     this->del_memory();
     this->data = temp;
-    ++this->size;
+    ++(this->size);
 }
 
 template<typename T>
@@ -149,11 +136,11 @@ T Vector<T>::pop() {
     T return_value = *(this->end());
     T* temp = new T[this->size - 1];
     for (int i = 0; i < this->size - 1; ++i) {
-        temp[i] = data[i];
+        temp[i] = this->data[i];
     }
-    del_memory();
-    data = temp;
-    --size;
+    this->del_memory();
+    this->data = temp;
+    --(this->size);
     return return_value;
 }
 
@@ -188,10 +175,9 @@ void Vector<T>::insert(const int & index, const T & new_el) {
             temp[i] = data[i];
         }
     }
-    del_memory();
-    data = temp;
-    if(size >= capacity) capacity *= 2;
-    ++size;
+    this->del_memory();
+    this->data = temp;
+    ++(this->size);
 }
 
 template<typename T>
