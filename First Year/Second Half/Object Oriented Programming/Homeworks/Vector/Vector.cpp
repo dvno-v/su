@@ -12,7 +12,7 @@
 template <typename T>
 void Vector<T>::del_memory() {
     delete[] this->data;
-    std::cout << "Deleting memory\n";
+    //std::cout << "Deleting memory\n";
 }
 
 template <typename T>
@@ -23,6 +23,15 @@ void Vector<T>::copy_memory(T*_data, unsigned _data_size) {
     for (unsigned i = 0; i < _data_size; ++i) {
         this->data[i] = _data[i];
     }
+}
+
+template<typename T>
+T *Vector<T>::copy_and_resize(T* _source, unsigned new_size, unsigned old_size) {
+    T* temp = new T[new_size];
+    for (int i = 0; i < std::min(new_size, old_size) ; ++i) {
+        temp[i] = _source[i];
+    }
+    return temp;
 }
 
 template <typename T>
@@ -121,10 +130,7 @@ void Vector<T>::assign(const T * start ,const T * end) {
 
 template<typename T>
 void Vector<T>::push(const T & new_el) {
-    T* temp = new T[this->size + 1];
-    for (int i = 0; i < this->size; ++i) {
-        temp[i] = this->data[i];
-    }
+    T*temp = this->copy_and_resize(this->data, this->size + 1, this->size);
     temp[this->size] = new_el;
     this->del_memory();
     this->data = temp;
@@ -134,10 +140,7 @@ void Vector<T>::push(const T & new_el) {
 template<typename T>
 T Vector<T>::pop() {
     T return_value = *(this->end());
-    T* temp = new T[this->size - 1];
-    for (int i = 0; i < this->size - 1; ++i) {
-        temp[i] = this->data[i];
-    }
+    T*temp = this->copy_and_resize(this->data, this->size - 1, this->size);
     this->del_memory();
     this->data = temp;
     --(this->size);
@@ -190,5 +193,13 @@ template<typename T>
 void Vector<T>::index_swap(const int &index1, const int &index2) {
     std::swap((*this)[index1], (*this)[index2]);
 }
+
+template<typename T>
+Vector<T>&Vector<T>::operator=(const Vector & _other) {
+    this->copy_memory(_other.data, _other.size);
+    this->size = _other.size;
+    return *this;
+}
+
 
 #endif // !__VECTOR_CPP

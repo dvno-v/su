@@ -36,6 +36,7 @@ public:
     void erase_all();
     void index_swap(const int&, const int&);
 
+    Vector&operator=(const Vector&);
 
     void print();
 private:
@@ -44,6 +45,7 @@ private:
 
     void del_memory();
     void copy_memory(T*, unsigned);
+    T* copy_and_resize(T*, unsigned, unsigned);
 };
 
 #endif //!__VECTOR_H
