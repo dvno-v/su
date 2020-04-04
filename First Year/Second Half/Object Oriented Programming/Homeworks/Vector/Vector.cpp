@@ -148,14 +148,14 @@ T Vector<T>::pop() {
 }
 
 template<typename T>
-void Vector<T>::shift(const T &new_el) {
+void Vector<T>::unshift(const T &new_el) {
     std::reverse(this->data, this->data + this->size);
     this->push(new_el);
     std::reverse(this->data, this->data + this->size);
 }
 
 template<typename T>
-T Vector<T>::unshift() {
+T Vector<T>::shift() {
     T temp = data[0];
     std::reverse(this->data, this->data + this->size);
     this->pop();

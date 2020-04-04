@@ -16,7 +16,7 @@ int main() {
     a.print();
     a.insert(2, 3.1);
     a.print();
-    std::cout << a.pop() << "  " << a.pop() << " " << a.unshift() << "  " << a.unshift() << "\n";
+    std::cout << a.pop() << "  " << a.pop() << " " << a.shift() << "  " << a.shift() << "\n";
     a.print();
     double arr[] = {2.1, 3, 3, 4.1};
     Vector<double> b(a), c = b, d(arr, 4);

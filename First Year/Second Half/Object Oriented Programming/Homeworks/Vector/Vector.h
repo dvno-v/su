@@ -29,8 +29,8 @@ public:
 
     void push(const T&);
     T pop();
-    void shift(const T&);
-    T unshift();
+    void unshift(const T&);
+    T shift();
 
     void insert(const int&, const T&);
     void erase_all();
