@@ -44,8 +44,8 @@ private:
     unsigned size;
 
     void del_memory();
-    void copy_memory(T*, const unsigned&);
-    T* copy_and_resize(T*,const unsigned&, const unsigned&);
+    void copy_memory(const T*, const unsigned&);
+    T* copy_and_resize(const T*,const unsigned&, const unsigned&);
 };
 
 #endif //!__VECTOR_H
