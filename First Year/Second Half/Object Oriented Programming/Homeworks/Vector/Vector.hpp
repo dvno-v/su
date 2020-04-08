@@ -14,7 +14,7 @@ template <typename T>
 class Vector {
 public:
     Vector();
-    Vector(T*, const unsigned&);
+    Vector(const T*, const unsigned&);
     Vector(const Vector&);
     ~Vector();
 
@@ -28,6 +28,9 @@ public:
 
     T&operator[](const int&);
     T& at(const int&);
+
+    const T& operator[](const int&) const;
+    const T& at(const int&) const;
 
     void assign(const int&, const T&);
     void assign(const T*, const T*);
@@ -86,7 +89,7 @@ Vector<T>::Vector() {
 }
 
 template <typename T>
-Vector<T>::Vector(T* _data, const unsigned& _data_size) {
+Vector<T>::Vector(const T* _data, const unsigned& _data_size) {
     this->copy_memory(_data, _data_size);
     this->size = _data_size;
 }
@@ -149,6 +152,17 @@ T &Vector<T>::operator[](const int & index) {
 
 template<typename T>
 T &Vector<T>::at(const int&index) {
+    return (*this)[index];
+}
+
+
+template<typename T>
+const T& Vector<T>::operator[](const int & index) const {
+    return this->data[index];
+}
+
+template<typename T>
+const T& Vector<T>::at(const int&index) const {
     return (*this)[index];
 }
 
@@ -236,13 +250,15 @@ void Vector<T>::erase_all() {
 
 template<typename T>
 void Vector<T>::index_swap(const int &index1, const int &index2) {
-    std::swap((*this)[index1], (*this)[index2]);
+    std::swap((*this).at(index1), (*this).at(index2));
 }
 
 template<typename T>
 Vector<T>&Vector<T>::operator=(const Vector & _other) {
-    this->copy_memory(_other.data, _other.size);
-    this->size = _other.size;
+    if(this != &_other){
+        this->copy_memory(_other.data, _other.size);
+        this->size = _other.size;
+    }
     return *this;
 }
 
