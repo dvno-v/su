@@ -33,19 +33,19 @@ cmake_force:
 SHELL = cmd.exe
 
 # The CMake executable.
-CMAKE_COMMAND = "C:\Program Files\JetBrains\CLion 2019.3.4\bin\cmake\win\bin\cmake.exe"
+CMAKE_COMMAND = "C:\Program Files\JetBrains\CLion 2019.3.5\bin\cmake\win\bin\cmake.exe"
 
 # The command to remove a file.
-RM = "C:\Program Files\JetBrains\CLion 2019.3.4\bin\cmake\win\bin\cmake.exe" -E remove -f
+RM = "C:\Program Files\JetBrains\CLion 2019.3.5\bin\cmake\win\bin\cmake.exe" -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "D:\Study\SU\First Year\Second Half\Object Oriented Programming\Homeworks\Vector"
+CMAKE_SOURCE_DIR = "C:\Personal Files\Study\SU\First Year\Second Half\Object Oriented Programming\Homeworks\Vector"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "D:\Study\SU\First Year\Second Half\Object Oriented Programming\Homeworks\Vector\cmake-build-debug"
+CMAKE_BINARY_DIR = "C:\Personal Files\Study\SU\First Year\Second Half\Object Oriented Programming\Homeworks\Vector\cmake-build-debug"
 
 # Include any dependencies generated for this target.
 include CMakeFiles/Vector.dir/depend.make
@@ -58,45 +58,30 @@ include CMakeFiles/Vector.dir/flags.make
 
 CMakeFiles/Vector.dir/main.cpp.obj: CMakeFiles/Vector.dir/flags.make
 CMakeFiles/Vector.dir/main.cpp.obj: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="D:\Study\SU\First Year\Second Half\Object Oriented Programming\Homeworks\Vector\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Vector.dir/main.cpp.obj"
-	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Vector.dir\main.cpp.obj -c "D:\Study\SU\First Year\Second Half\Object Oriented Programming\Homeworks\Vector\main.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Personal Files\Study\SU\First Year\Second Half\Object Oriented Programming\Homeworks\Vector\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Vector.dir/main.cpp.obj"
+	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Vector.dir\main.cpp.obj -c "C:\Personal Files\Study\SU\First Year\Second Half\Object Oriented Programming\Homeworks\Vector\main.cpp"
 
 CMakeFiles/Vector.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Vector.dir/main.cpp.i"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "D:\Study\SU\First Year\Second Half\Object Oriented Programming\Homeworks\Vector\main.cpp" > CMakeFiles\Vector.dir\main.cpp.i
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Personal Files\Study\SU\First Year\Second Half\Object Oriented Programming\Homeworks\Vector\main.cpp" > CMakeFiles\Vector.dir\main.cpp.i
 
 CMakeFiles/Vector.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Vector.dir/main.cpp.s"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "D:\Study\SU\First Year\Second Half\Object Oriented Programming\Homeworks\Vector\main.cpp" -o CMakeFiles\Vector.dir\main.cpp.s
-
-CMakeFiles/Vector.dir/Vector.cpp.obj: CMakeFiles/Vector.dir/flags.make
-CMakeFiles/Vector.dir/Vector.cpp.obj: ../Vector.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="D:\Study\SU\First Year\Second Half\Object Oriented Programming\Homeworks\Vector\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Vector.dir/Vector.cpp.obj"
-	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Vector.dir\Vector.cpp.obj -c "D:\Study\SU\First Year\Second Half\Object Oriented Programming\Homeworks\Vector\Vector.cpp"
-
-CMakeFiles/Vector.dir/Vector.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Vector.dir/Vector.cpp.i"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "D:\Study\SU\First Year\Second Half\Object Oriented Programming\Homeworks\Vector\Vector.cpp" > CMakeFiles\Vector.dir\Vector.cpp.i
-
-CMakeFiles/Vector.dir/Vector.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Vector.dir/Vector.cpp.s"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "D:\Study\SU\First Year\Second Half\Object Oriented Programming\Homeworks\Vector\Vector.cpp" -o CMakeFiles\Vector.dir\Vector.cpp.s
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Personal Files\Study\SU\First Year\Second Half\Object Oriented Programming\Homeworks\Vector\main.cpp" -o CMakeFiles\Vector.dir\main.cpp.s
 
 # Object files for target Vector
 Vector_OBJECTS = \
-"CMakeFiles/Vector.dir/main.cpp.obj" \
-"CMakeFiles/Vector.dir/Vector.cpp.obj"
+"CMakeFiles/Vector.dir/main.cpp.obj"
 
 # External object files for target Vector
 Vector_EXTERNAL_OBJECTS =
 
 Vector.exe: CMakeFiles/Vector.dir/main.cpp.obj
-Vector.exe: CMakeFiles/Vector.dir/Vector.cpp.obj
 Vector.exe: CMakeFiles/Vector.dir/build.make
 Vector.exe: CMakeFiles/Vector.dir/linklibs.rsp
 Vector.exe: CMakeFiles/Vector.dir/objects1.rsp
 Vector.exe: CMakeFiles/Vector.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="D:\Study\SU\First Year\Second Half\Object Oriented Programming\Homeworks\Vector\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable Vector.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="C:\Personal Files\Study\SU\First Year\Second Half\Object Oriented Programming\Homeworks\Vector\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable Vector.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\Vector.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -109,6 +94,6 @@ CMakeFiles/Vector.dir/clean:
 .PHONY : CMakeFiles/Vector.dir/clean
 
 CMakeFiles/Vector.dir/depend:
-	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" "D:\Study\SU\First Year\Second Half\Object Oriented Programming\Homeworks\Vector" "D:\Study\SU\First Year\Second Half\Object Oriented Programming\Homeworks\Vector" "D:\Study\SU\First Year\Second Half\Object Oriented Programming\Homeworks\Vector\cmake-build-debug" "D:\Study\SU\First Year\Second Half\Object Oriented Programming\Homeworks\Vector\cmake-build-debug" "D:\Study\SU\First Year\Second Half\Object Oriented Programming\Homeworks\Vector\cmake-build-debug\CMakeFiles\Vector.dir\DependInfo.cmake" --color=$(COLOR)
+	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" "C:\Personal Files\Study\SU\First Year\Second Half\Object Oriented Programming\Homeworks\Vector" "C:\Personal Files\Study\SU\First Year\Second Half\Object Oriented Programming\Homeworks\Vector" "C:\Personal Files\Study\SU\First Year\Second Half\Object Oriented Programming\Homeworks\Vector\cmake-build-debug" "C:\Personal Files\Study\SU\First Year\Second Half\Object Oriented Programming\Homeworks\Vector\cmake-build-debug" "C:\Personal Files\Study\SU\First Year\Second Half\Object Oriented Programming\Homeworks\Vector\cmake-build-debug\CMakeFiles\Vector.dir\DependInfo.cmake" --color=$(COLOR)
 .PHONY : CMakeFiles/Vector.dir/depend
 

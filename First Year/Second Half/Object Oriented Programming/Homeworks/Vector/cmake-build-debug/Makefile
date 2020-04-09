@@ -38,19 +38,19 @@ cmake_force:
 SHELL = cmd.exe
 
 # The CMake executable.
-CMAKE_COMMAND = "C:\Program Files\JetBrains\CLion 2019.3.4\bin\cmake\win\bin\cmake.exe"
+CMAKE_COMMAND = "C:\Program Files\JetBrains\CLion 2019.3.5\bin\cmake\win\bin\cmake.exe"
 
 # The command to remove a file.
-RM = "C:\Program Files\JetBrains\CLion 2019.3.4\bin\cmake\win\bin\cmake.exe" -E remove -f
+RM = "C:\Program Files\JetBrains\CLion 2019.3.5\bin\cmake\win\bin\cmake.exe" -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "D:\Study\SU\First Year\Second Half\Object Oriented Programming\Homeworks\Vector"
+CMAKE_SOURCE_DIR = "C:\Personal Files\Study\SU\First Year\Second Half\Object Oriented Programming\Homeworks\Vector"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "D:\Study\SU\First Year\Second Half\Object Oriented Programming\Homeworks\Vector\cmake-build-debug"
+CMAKE_BINARY_DIR = "C:\Personal Files\Study\SU\First Year\Second Half\Object Oriented Programming\Homeworks\Vector\cmake-build-debug"
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -58,7 +58,7 @@ CMAKE_BINARY_DIR = "D:\Study\SU\First Year\Second Half\Object Oriented Programmi
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	"C:\Program Files\JetBrains\CLion 2019.3.4\bin\cmake\win\bin\cmake.exe" -E echo "No interactive CMake dialog available."
+	"C:\Program Files\JetBrains\CLion 2019.3.5\bin\cmake\win\bin\cmake.exe" -E echo "No interactive CMake dialog available."
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -69,7 +69,7 @@ edit_cache/fast: edit_cache
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	"C:\Program Files\JetBrains\CLion 2019.3.4\bin\cmake\win\bin\cmake.exe" -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	"C:\Program Files\JetBrains\CLion 2019.3.5\bin\cmake\win\bin\cmake.exe" -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -79,9 +79,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "D:\Study\SU\First Year\Second Half\Object Oriented Programming\Homeworks\Vector\cmake-build-debug\CMakeFiles" "D:\Study\SU\First Year\Second Half\Object Oriented Programming\Homeworks\Vector\cmake-build-debug\CMakeFiles\progress.marks"
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Personal Files\Study\SU\First Year\Second Half\Object Oriented Programming\Homeworks\Vector\cmake-build-debug\CMakeFiles" "C:\Personal Files\Study\SU\First Year\Second Half\Object Oriented Programming\Homeworks\Vector\cmake-build-debug\CMakeFiles\progress.marks"
 	$(MAKE) -f CMakeFiles\Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start "D:\Study\SU\First Year\Second Half\Object Oriented Programming\Homeworks\Vector\cmake-build-debug\CMakeFiles" 0
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Personal Files\Study\SU\First Year\Second Half\Object Oriented Programming\Homeworks\Vector\cmake-build-debug\CMakeFiles" 0
 .PHONY : all
 
 # The main clean target
@@ -122,33 +122,6 @@ Vector/fast:
 	$(MAKE) -f CMakeFiles\Vector.dir\build.make CMakeFiles/Vector.dir/build
 .PHONY : Vector/fast
 
-Vector.obj: Vector.cpp.obj
-
-.PHONY : Vector.obj
-
-# target to build an object file
-Vector.cpp.obj:
-	$(MAKE) -f CMakeFiles\Vector.dir\build.make CMakeFiles/Vector.dir/Vector.cpp.obj
-.PHONY : Vector.cpp.obj
-
-Vector.i: Vector.cpp.i
-
-.PHONY : Vector.i
-
-# target to preprocess a source file
-Vector.cpp.i:
-	$(MAKE) -f CMakeFiles\Vector.dir\build.make CMakeFiles/Vector.dir/Vector.cpp.i
-.PHONY : Vector.cpp.i
-
-Vector.s: Vector.cpp.s
-
-.PHONY : Vector.s
-
-# target to generate assembly for a file
-Vector.cpp.s:
-	$(MAKE) -f CMakeFiles\Vector.dir\build.make CMakeFiles/Vector.dir/Vector.cpp.s
-.PHONY : Vector.cpp.s
-
 main.obj: main.cpp.obj
 
 .PHONY : main.obj
@@ -185,9 +158,6 @@ help:
 	@echo ... Vector
 	@echo ... edit_cache
 	@echo ... rebuild_cache
-	@echo ... Vector.obj
-	@echo ... Vector.i
-	@echo ... Vector.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s

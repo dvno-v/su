@@ -6,17 +6,13 @@
 
 #IncludeRegexTransform: 
 
-D:/Study/SU/First Year/Second Half/Object Oriented Programming/Homeworks/Vector/Vector.cpp
+C:/Personal Files/Study/SU/First Year/Second Half/Object Oriented Programming/Homeworks/Vector/Vector.hpp
 iostream
 -
 algorithm
 -
-Vector.h
-D:/Study/SU/First Year/Second Half/Object Oriented Programming/Homeworks/Vector/Vector.h
 
-D:/Study/SU/First Year/Second Half/Object Oriented Programming/Homeworks/Vector/Vector.h
-
-D:/Study/SU/First Year/Second Half/Object Oriented Programming/Homeworks/Vector/main.cpp
-Vector.cpp
-D:/Study/SU/First Year/Second Half/Object Oriented Programming/Homeworks/Vector/Vector.cpp
+C:/Personal Files/Study/SU/First Year/Second Half/Object Oriented Programming/Homeworks/Vector/main.cpp
+Vector.hpp
+C:/Personal Files/Study/SU/First Year/Second Half/Object Oriented Programming/Homeworks/Vector/Vector.hpp
 
