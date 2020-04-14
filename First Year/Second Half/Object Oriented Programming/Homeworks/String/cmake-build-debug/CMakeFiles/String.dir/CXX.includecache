@@ -1,0 +1,34 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/mnt/18809F31809F13FA/Study/SU/First Year/Second Half/Object Oriented Programming/Homeworks/String/String.cpp
+String.h
+/mnt/18809F31809F13FA/Study/SU/First Year/Second Half/Object Oriented Programming/Homeworks/String/String.h
+
+/mnt/18809F31809F13FA/Study/SU/First Year/Second Half/Object Oriented Programming/Homeworks/String/String.h
+iostream
+-
+cstring
+-
+iostream
+-
+cassert
+-
+
+/mnt/18809F31809F13FA/Study/SU/First Year/Second Half/Object Oriented Programming/Homeworks/String/StringImpl.h
+String.h
+/mnt/18809F31809F13FA/Study/SU/First Year/Second Half/Object Oriented Programming/Homeworks/String/String.h
+String.cpp
+/mnt/18809F31809F13FA/Study/SU/First Year/Second Half/Object Oriented Programming/Homeworks/String/String.cpp
+
+/mnt/18809F31809F13FA/Study/SU/First Year/Second Half/Object Oriented Programming/Homeworks/String/main.cpp
+iostream
+-
+StringImpl.h
+/mnt/18809F31809F13FA/Study/SU/First Year/Second Half/Object Oriented Programming/Homeworks/String/StringImpl.h
+

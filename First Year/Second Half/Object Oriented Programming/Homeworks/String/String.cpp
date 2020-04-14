@@ -1,10 +1,12 @@
 #ifndef STRING_CPP
 
 #define STRING_CPP
+#include "String.h"
 
 void String::erase_memory()
 {
     delete[] m_data;
+    m_data = nullptr;
 }
 
 void String::copy_memory(const char* data)
@@ -14,10 +16,13 @@ void String::copy_memory(const char* data)
     m_data = temp;
 }
 
-void String::resize(){
-    m_max_capacity *= 2; 
-    char* temp = new char [m_max_capacity];
-    strcpy(temp, m_data);
+void String::resize(unsigned& n){
+    char* temp = new char [n];
+    if(m_data != nullptr) {
+        for (int i = 0; i < n; ++i) {
+            temp[i] = m_data[i];
+        }
+    }
     erase_memory();
     m_data = temp;
 }
@@ -27,14 +32,12 @@ String::String()
 {
     m_data = nullptr;
     m_curr_size = 0;
-    m_max_capacity = 0;
 }
 
 String::String(const char* data)
 {
     copy_memory(data);
     m_curr_size = strlen(data) + 1;
-    m_max_capacity = m_curr_size * 2;
 }
 
 
@@ -42,7 +45,6 @@ String::String(const String& other)
 {
     copy_memory(other.m_data);
     m_curr_size = strlen(other.m_data) + 1;
-    m_max_capacity = m_curr_size * 2;
 }
 
 
@@ -53,10 +55,11 @@ String::~String()
 
 String& String::operator=(const String& other)
 {
-    erase_memory();
-    copy_memory(other.m_data);
-    m_curr_size = other.m_curr_size;
-    m_max_capacity = other.m_max_capacity;
+    if(&other != this){
+        erase_memory();
+        copy_memory(other.m_data);
+        m_curr_size = other.m_curr_size;
+    }
     return *this;
 }
 
@@ -81,7 +84,7 @@ const char* String::data() const{
     return m_data;
 }
 
-bool String::empty() const{
+bool String::empty(){
     return m_curr_size == 0;
 }
 
@@ -89,20 +92,15 @@ unsigned String::get_size() const {
     return m_curr_size;
 }
 
-unsigned String::get_max_capacity() const {
-    return m_max_capacity;
-}
+
 
 void String::clear(){
     erase_memory();
-    m_data = new char[m_curr_size];
+    m_curr_size = 0;
 }
 
 void String::insert(const char& c, const unsigned& index){
-    if(m_curr_size + 1 >= m_max_capacity){
-        resize();
-    }
-    bool passed_index = false;
+    resize(++m_curr_size);
 
     for (int i = m_curr_size - 1; i > index; i--)
     {
@@ -110,11 +108,64 @@ void String::insert(const char& c, const unsigned& index){
     }
 
     m_data[index] = c;
-    m_data[m_curr_size++] = '\0';    
+}
+
+void String::erase(const unsigned& start, const unsigned& finish){
+    assert(start >= 0 && finish < m_curr_size);
+    unsigned diff = finish - start;
+    unsigned help_counter = finish;
+    for (unsigned i = 0; i < m_curr_size; i++)
+    {
+        if(i >= start && i <= finish && help_counter < m_curr_size){
+            m_data[i] = m_data[help_counter++];
+        }
+    }
+    m_curr_size -= diff;
+    resize(m_curr_size);
+}
+
+void String::erase(const unsigned& start){
+    erase(start, m_curr_size - 1);
+}
+
+
+void String::erase(const char* start, const char* finish){
+    unsigned u_start = start - front();
+    unsigned u_end = finish - back();
+    erase(u_start, u_end);
+
+}
+void String::erase(const char* start){
+    unsigned u_start = start - front();
+    erase(u_start, m_curr_size - 1);
+}
+void String::push_back(const char& c){
+    resize(++m_curr_size);
+    m_data[m_curr_size - 1] = c;
+}
+char String::pop_back(){
+    if(m_curr_size >= 0){
+        char temp = m_data[m_curr_size - 1];
+        resize(--m_curr_size);
+        return temp;
+    }
+}
+void String::append(const char& c){
+    push_back(c);
+}
+void String::operator+=(const char& c){
+    append(c);
+}
+
+int String::compare(const String& other){
+    return strcmp(m_data, other.m_data);
 }
 
 std::ostream& operator<<(std::ostream& out, const String& str){
-    out << str.data() << std::endl;
+    for (int i = 0; i < str.get_size(); ++i) {
+        out << str.data()[i];
+    }
+    std::cout << std::endl;
     return out;
 }
 #endif //!STRING_CPP

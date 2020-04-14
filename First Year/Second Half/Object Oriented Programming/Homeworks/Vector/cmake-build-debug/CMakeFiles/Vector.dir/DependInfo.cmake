@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "C:/Personal Files/Study/SU/First Year/Second Half/Object Oriented Programming/Homeworks/Vector/main.cpp" "C:/Personal Files/Study/SU/First Year/Second Half/Object Oriented Programming/Homeworks/Vector/cmake-build-debug/CMakeFiles/Vector.dir/main.cpp.obj"
+  "/mnt/18809F31809F13FA/Study/SU/First Year/Second Half/Object Oriented Programming/Homeworks/Vector/main.cpp" "/mnt/18809F31809F13FA/Study/SU/First Year/Second Half/Object Oriented Programming/Homeworks/Vector/cmake-build-debug/CMakeFiles/Vector.dir/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

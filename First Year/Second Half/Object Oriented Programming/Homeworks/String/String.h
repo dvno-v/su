@@ -10,10 +10,9 @@ class String
 private:
     char* m_data;
     unsigned m_curr_size;
-    unsigned m_max_capacity;
     void copy_memory(const char*);
     void erase_memory();
-    void resize();
+    void resize(unsigned&);
 public:
     String();
     String(const char*);
@@ -29,9 +28,8 @@ public:
 	const char* back() const;
 	const char* data() const;
 
-	bool empty() const;
+	bool empty();
 	unsigned get_size() const;
-	unsigned get_max_capacity() const;
 
 	void clear();
 	void insert(const char&, const unsigned&);
