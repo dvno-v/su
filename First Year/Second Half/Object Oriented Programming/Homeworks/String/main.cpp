@@ -1,10 +1,8 @@
 #include <iostream>
-#include "String.h"
+#include "StringImpl.h"
 
-int main() {
-
-	String a;
-	
-
-	return 0;
+int main(){
+    String a("Gosho");
+    a.insert('a', 2);
+    operator<<(std::cout, a);
 }
