@@ -1,3 +1,0 @@
-/mnt/18809F31809F13FA/Study/SU/First Year/Second Half/Object Oriented Programming/Homeworks/Vector/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/mnt/18809F31809F13FA/Study/SU/First Year/Second Half/Object Oriented Programming/Homeworks/Vector/cmake-build-debug/CMakeFiles/Vector.dir
-/mnt/18809F31809F13FA/Study/SU/First Year/Second Half/Object Oriented Programming/Homeworks/Vector/cmake-build-debug/CMakeFiles/edit_cache.dir
