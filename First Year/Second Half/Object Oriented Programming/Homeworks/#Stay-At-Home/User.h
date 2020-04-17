@@ -6,11 +6,10 @@
 class User
 {
 private:
-    unsigned unique_id;
+    unsigned long unique_id;
     char* name;
     unsigned age;
     char* email;
-
     Challenge* challenges;
 
     void del_memory(char const *);
@@ -23,6 +22,11 @@ public:
     User(const char*);
     ~User();
 
+    unsigned get_unique_id() const;
+
+    bool add_challenge(const Challenge&);
+    bool remove_challenge(const Challenge&);
+    
     void print() const;
 };
 
