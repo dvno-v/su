@@ -1,8 +1,6 @@
 #include <iostream>
 
-#include "User.cpp"
 #include "User.h"
-
 
 
 int main(){
