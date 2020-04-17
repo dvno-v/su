@@ -13,7 +13,7 @@ private:
 
     Challenge* challenges;
 
-    void del_memory();
+    void del_memory(char const *);
     char* copy_memory(char const *);
 
 public:

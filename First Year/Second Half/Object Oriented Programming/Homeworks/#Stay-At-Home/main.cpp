@@ -3,15 +3,16 @@
 #include "User.cpp"
 
 
+
 int main(){
-    char a[MAX_NAME_LENGTH], b[MAX_NAME_LENGTH];
-    int c;
-    std::cin.getline(a, MAX_NAME_LENGTH, ' ');
-    std::cin >> c; 
-    std::cin.get();
-    std::cin.getline(b, MAX_EMAIL_LENGTH);
-    User u(a,c,b);
+    char a[] = "pesho", b[] = "p@abv.bg", _a[] = "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa";
+    User u(a,10,b), c(a,80,b),v(a,10,b),n(a,10,b),q(a,10,b),m(_a,b);
     u.print();
+    c.print();
+    v.print();
+    n.print();
+    q.print();
+    m.print();
 
     return 0;
 }
