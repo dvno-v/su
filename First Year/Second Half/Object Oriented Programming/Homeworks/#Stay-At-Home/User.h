@@ -2,7 +2,7 @@
 
 #define USER_H
 
-#include "Challenge.h"
+#include "Challenge.cpp"
 
 class User
 {
@@ -11,11 +11,12 @@ private:
     char* name;
     unsigned age;
     char* email;
-    Challenge* challenges;
+    Challenge** challenges;
+    unsigned number_of_challenges;
 
     void del_memory(char const *);
     char* copy_memory(char const *);
-
+    void init_challenge_list();
 public:
     User(const char*, unsigned, const char*);
     User(const char*, unsigned);
@@ -25,8 +26,8 @@ public:
 
     unsigned get_unique_id() const;
 
-    bool add_challenge(const Challenge&);
-    bool remove_challenge(const Challenge&);
+    bool add_challenge(char const *);
+    bool remove_challenge(char const *);
     
     void print() const;
 };

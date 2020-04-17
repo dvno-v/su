@@ -32,43 +32,53 @@ void User::del_memory(char const * to_delete){
         // std::cout << "deleted challenges\n"; 
         delete[] this->challenges;
     }
-   
-}
+ }
+
 User::User(const char* _name , unsigned _age, const char* _email){
     assert(strlen(_name) < MAX_NAME_LENGTH);
     assert(strlen(_email) < MAX_EMAIL_LENGTH);
     assert(_age <= MAX_AGE && _age >=1);
+
     this->unique_id = reinterpret_cast<unsigned long>(this);
     this->age = _age;
     this->name = copy_memory(_name);
     this->email = copy_memory(_email);
+    this->number_of_challenges = 0;
     this->challenges = nullptr;
 }
+
 User::User(const char* _name , unsigned _age){
     assert(strlen(_name) < MAX_NAME_LENGTH);
     assert(_age <= MAX_AGE && _age >=1);
+
     this->unique_id = reinterpret_cast<unsigned long>(this);
     this->age = _age;
     this->name = copy_memory(_name);
     this->email = copy_memory("Unknown");
     this->challenges = nullptr;
+    this->number_of_challenges = 0;
 }
 
 User::User(const char* _name, const char* _email){
     assert(strlen(_name) < MAX_NAME_LENGTH);
     assert(strlen(_email) < MAX_EMAIL_LENGTH);
+
     this->unique_id = reinterpret_cast<unsigned long>(this);
     this->age = NO_AGE;
     this->name = copy_memory(_name);
     this->email = copy_memory(_email);
+    this->number_of_challenges = 0;
     this->challenges = nullptr;
 }
+
 User::User(const char* _name){
     assert(strlen(_name) < MAX_NAME_LENGTH);
+
     this->unique_id = reinterpret_cast<unsigned long>(this);
     this->age = NO_AGE;
     this->name = copy_memory(_name);
     this->email = copy_memory("Unknown");
+    this->number_of_challenges = 0;
     this->challenges = nullptr;
 }
 
@@ -82,6 +92,12 @@ User::~User(){
 unsigned User::get_unique_id() const{
     return this->unique_id;
 }
+
+// bool User::add_challenge(const char * challenge_name ){
+    
+// }
+
+
 
 
 void User::print() const{

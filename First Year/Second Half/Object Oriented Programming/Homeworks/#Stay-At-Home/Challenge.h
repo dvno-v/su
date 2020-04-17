@@ -14,8 +14,9 @@ private:
     void del_memory(char const *);
     char* copy_memory(char const *);
 public:
-    Challenge(/* args */);
+    Challenge();
     ~Challenge();
+    void finish_challenge();
 };
 
 
