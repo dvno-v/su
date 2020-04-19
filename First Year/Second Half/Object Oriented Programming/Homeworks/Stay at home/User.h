@@ -14,8 +14,8 @@ private:
     Challenge** challenges;
     unsigned number_of_challenges;
 
-    void del_memory(char const*);
-    char* copy_memory(char const*);
+    void del_user_memory(char const*);
+    char* copy_user_memory(char const*);
     void init_challenge_list();
 public:
     User(const char*, unsigned, const char*);
@@ -28,7 +28,7 @@ public:
     unsigned get_unique_id() const;
 
     void add_challenge(Challenge*);
-    void finish_challenge(Challenge*);
+    void remove_challenge_from_user(Challenge*);
 
     void print() const;
 };

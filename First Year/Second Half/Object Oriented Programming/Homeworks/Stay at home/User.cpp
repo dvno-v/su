@@ -13,13 +13,13 @@ const unsigned MAX_NAME_LENGTH = 101;
 const unsigned NO_AGE = -404;
 
 
-char* User::copy_memory(char const* source) {
+char* User::copy_user_memory(char const* source) {
     char* temp = new char[strlen(source) + 1];
     strcpy_s(temp, strlen(source) + 1,source);
     return temp;
 }
 
-void User::del_memory(char const* to_delete) {
+void User::del_user_memory(char const* to_delete) {
     if (strcmp(to_delete, "email") == 0) {
         // std::cout << "deleted email\n"; 
         delete[] this->email;
@@ -42,8 +42,8 @@ User::User(const char* _name, unsigned _age, const char* _email) {
 
     this->unique_id = reinterpret_cast<unsigned long>(this);
     this->age = _age;
-    this->name = copy_memory(_name);
-    this->email = copy_memory(_email);
+    this->name = copy_user_memory(_name);
+    this->email = copy_user_memory(_email);
     this->number_of_challenges = 0;
     this->challenges = nullptr;
 }
@@ -55,8 +55,8 @@ User::User(const char* _name, unsigned _age) {
 
     this->unique_id = reinterpret_cast<unsigned long>(this);
     this->age = _age;
-    this->name = copy_memory(_name);
-    this->email = copy_memory("Unknown");
+    this->name = copy_user_memory(_name);
+    this->email = copy_user_memory("Unknown");
     this->challenges = nullptr;
     this->number_of_challenges = 0;
 }
@@ -68,8 +68,8 @@ User::User(const char* _name, const char* _email) {
 
     this->unique_id = reinterpret_cast<unsigned long>(this);
     this->age = NO_AGE;
-    this->name = copy_memory(_name);
-    this->email = copy_memory(_email);
+    this->name = copy_user_memory(_name);
+    this->email = copy_user_memory(_email);
     this->number_of_challenges = 0;
     this->challenges = nullptr;
 }
@@ -80,8 +80,8 @@ User::User(const char* _name) {
 
     this->unique_id = reinterpret_cast<unsigned long>(this);
     this->age = NO_AGE;
-    this->name = copy_memory(_name);
-    this->email = copy_memory("Unknown");
+    this->name = copy_user_memory(_name);
+    this->email = copy_user_memory("Unknown");
     this->number_of_challenges = 0;
     this->challenges = nullptr;
 }
@@ -89,9 +89,9 @@ User::User(const char* _name) {
 User::User(const User& _other) {
 
     this->unique_id = reinterpret_cast<unsigned long>(this);
-    this->name = copy_memory(_other.name);
+    this->name = copy_user_memory(_other.name);
     this->age = _other.age;
-    this->email = copy_memory(_other.email);
+    this->email = copy_user_memory(_other.email);
 
     this->challenges = new Challenge * [_other.number_of_challenges];
     for (unsigned i = 0; i < _other.number_of_challenges; i++)
@@ -103,9 +103,9 @@ User::User(const User& _other) {
 }
 
 User::~User() {
-    this->del_memory("name");
-    this->del_memory("email");
-    this->del_memory("challenges");
+    this->del_user_memory("name");
+    this->del_user_memory("email");
+    this->del_user_memory("challenges");
 }
 
 unsigned User::get_unique_id() const {
@@ -119,12 +119,12 @@ void User::add_challenge(Challenge* to_add) {
         temp[i] = this->challenges[i];
     }
     temp[this->number_of_challenges] = to_add;
-    this->del_memory("challenge");
+    this->del_user_memory("challenge");
     this->challenges = temp;
 }
 
-void User::finish_challenge(Challenge* finished) {
-
+void User::remove_challenge_from_user(Challenge* finished) {
+    
 }
 
 

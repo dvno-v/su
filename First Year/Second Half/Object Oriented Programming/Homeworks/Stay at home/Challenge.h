@@ -6,17 +6,22 @@ class Challenge
 {
 private:
     double rating;
-    unsigned times_called;
     char* name;
     char* status;
+    unsigned times_called;
 
-    void update_rating(double);
     void del_challenge_memory(char const*);
     char* copy_challenge_memory(char const*);
+
 public:
     Challenge();
+    Challenge(const char*);
+    Challenge(const Challenge&);
+    Challenge(const char*, unsigned, double);
     ~Challenge();
 
+    void update_rating(double);
+    void update_status();
 };
 
 
