@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
+    <generated>
+      <config projectName="String" targetName="String" />
+    </generated>
+  </component>
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="d47f9f1f-366b-4f0b-b24e-c2403d9752ec" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/String.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Inheritance Exercise/Inheritance Exercise/Inheritance Exercise.sln" beforeDir="false" afterPath="$PROJECT_DIR$/../Inheritance Exercise/Inheritance Exercise/Inheritance Exercise.sln" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Inheritance Exercise/Inheritance Exercise/Inheritance Exercise.vcxproj" beforeDir="false" afterPath="$PROJECT_DIR$/../Inheritance Exercise/Inheritance Exercise/Inheritance Exercise.vcxproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Inheritance Exercise/Inheritance Exercise/Inheritance Exercise.vcxproj.filters" beforeDir="false" afterPath="$PROJECT_DIR$/../Inheritance Exercise/Inheritance Exercise/Inheritance Exercise.vcxproj.filters" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Inheritance Exercise/Inheritance Exercise/Inheritance Exercise.vcxproj.user" beforeDir="false" afterPath="$PROJECT_DIR$/../Inheritance Exercise/Inheritance Exercise/Inheritance Exercise.vcxproj.user" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Inheritance Exercise/Inheritance Exercise/Person.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Inheritance Exercise/Inheritance Exercise/Person.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Inheritance Exercise/Inheritance Exercise/Person.h" beforeDir="false" afterPath="$PROJECT_DIR$/../Inheritance Exercise/Inheritance Exercise/Person.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Inheritance Exercise/Inheritance Exercise/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Inheritance Exercise/Inheritance Exercise/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vscode/settings.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/String.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/String.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/String.h" beforeDir="false" afterPath="$PROJECT_DIR$/String.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/StringImpl.h" beforeDir="false" afterPath="$PROJECT_DIR$/StringImpl.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/a.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Vector/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../Vector/.idea/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Vector/.idea/Vector.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../Vector/.idea/Vector.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Vector/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Vector/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Vector/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Vector/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Vector/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Vector/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Vector/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Vector/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Vector/Vector.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Vector/Vector.hpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Vector/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Vector/cmake-build-debug/CMakeCache.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Vector/cmake-build-debug/CMakeFiles/3.15.3/CMakeCCompiler.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../Vector/cmake-build-debug/CMakeFiles/3.15.3/CMakeCCompiler.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Vector/cmake-build-debug/CMakeFiles/3.15.3/CMakeCXXCompiler.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../Vector/cmake-build-debug/CMakeFiles/3.15.3/CMakeCXXCompiler.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Vector/cmake-build-debug/CMakeFiles/3.15.3/CMakeDetermineCompilerABI_C.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../Vector/cmake-build-debug/CMakeFiles/3.15.3/CMakeDetermineCompilerABI_C.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Vector/cmake-build-debug/CMakeFiles/3.15.3/CMakeDetermineCompilerABI_CXX.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../Vector/cmake-build-debug/CMakeFiles/3.15.3/CMakeDetermineCompilerABI_CXX.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Vector/cmake-build-debug/CMakeFiles/3.15.3/CMakeRCCompiler.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Vector/cmake-build-debug/CMakeFiles/3.15.3/CMakeSystem.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../Vector/cmake-build-debug/CMakeFiles/3.15.3/CMakeSystem.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Vector/cmake-build-debug/CMakeFiles/3.15.3/CompilerIdC/a.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Vector/cmake-build-debug/CMakeFiles/3.15.3/CompilerIdCXX/a.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Vector/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../Vector/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Vector/cmake-build-debug/CMakeFiles/CMakeOutput.log" beforeDir="false" afterPath="$PROJECT_DIR$/../Vector/cmake-build-debug/CMakeFiles/CMakeOutput.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Vector/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../Vector/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Vector/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/../Vector/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Vector/cmake-build-debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Vector/cmake-build-debug/CMakeFiles/TargetDirectories.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Vector/cmake-build-debug/CMakeFiles/Vector.dir/CXX.includecache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Vector/cmake-build-debug/CMakeFiles/Vector.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../Vector/cmake-build-debug/CMakeFiles/Vector.dir/DependInfo.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Vector/cmake-build-debug/CMakeFiles/Vector.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/../Vector/cmake-build-debug/CMakeFiles/Vector.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Vector/cmake-build-debug/CMakeFiles/Vector.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../Vector/cmake-build-debug/CMakeFiles/Vector.dir/cmake_clean.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Vector/cmake-build-debug/CMakeFiles/Vector.dir/depend.internal" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Vector/cmake-build-debug/CMakeFiles/Vector.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/../Vector/cmake-build-debug/CMakeFiles/Vector.dir/depend.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Vector/cmake-build-debug/CMakeFiles/Vector.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/../Vector/cmake-build-debug/CMakeFiles/Vector.dir/flags.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Vector/cmake-build-debug/CMakeFiles/Vector.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Vector/cmake-build-debug/CMakeFiles/Vector.dir/link.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Vector/cmake-build-debug/CMakeFiles/Vector.dir/linklibs.rsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Vector/cmake-build-debug/CMakeFiles/Vector.dir/main.cpp.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Vector/cmake-build-debug/CMakeFiles/Vector.dir/objects.a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Vector/cmake-build-debug/CMakeFiles/Vector.dir/objects1.rsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Vector/cmake-build-debug/CMakeFiles/clion-environment.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Vector/cmake-build-debug/CMakeFiles/clion-environment.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Vector/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Vector/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Vector/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/../Vector/cmake-build-debug/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Vector/cmake-build-debug/Vector.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/../Vector/cmake-build-debug/Vector.cbp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Vector/cmake-build-debug/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../Vector/cmake-build-debug/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Vector/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Vector/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Practicum/Excersise- BDJ/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../../Practicum/Excersise- BDJ/.idea/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Practicum/Excersise- BDJ/.idea/Excersise- BDJ.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Practicum/Excersise- BDJ/.idea/Excersise- BDJ.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Practicum/Excersise- BDJ/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Practicum/Excersise- BDJ/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Practicum/Excersise- BDJ/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Practicum/Excersise- BDJ/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Practicum/Excersise- BDJ/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Practicum/Excersise- BDJ/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Practicum/Excersise- BDJ/BDJ.sln" beforeDir="false" afterPath="$PROJECT_DIR$/../../Practicum/Excersise- BDJ/BDJ.sln" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Practicum/Excersise- BDJ/BDJ.vcxproj" beforeDir="false" afterPath="$PROJECT_DIR$/../../Practicum/Excersise- BDJ/BDJ.vcxproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Practicum/Excersise- BDJ/BDJ.vcxproj.filters" beforeDir="false" afterPath="$PROJECT_DIR$/../../Practicum/Excersise- BDJ/BDJ.vcxproj.filters" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Practicum/Excersise- BDJ/BDJ.vcxproj.user" beforeDir="false" afterPath="$PROJECT_DIR$/../../Practicum/Excersise- BDJ/BDJ.vcxproj.user" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Practicum/Excersise- BDJ/Debug/BDJ.log" beforeDir="false" afterPath="$PROJECT_DIR$/../../Practicum/Excersise- BDJ/Debug/BDJ.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Practicum/Excersise- BDJ/Debug/BDJ.tlog/BDJ.lastbuildstate" beforeDir="false" afterPath="$PROJECT_DIR$/../../Practicum/Excersise- BDJ/Debug/BDJ.tlog/BDJ.lastbuildstate" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Practicum/Excersise- BDJ/Person.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../Practicum/Excersise- BDJ/Person.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Practicum/Excersise- BDJ/Person.h" beforeDir="false" afterPath="$PROJECT_DIR$/../../Practicum/Excersise- BDJ/Person.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Practicum/Excersise- BDJ/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../Practicum/Excersise- BDJ/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Practicum/Week-3/Solution/.vscode/settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../Practicum/Week-3/Solution/.vscode/settings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Practicum/Week-3/Solution/Car.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../Practicum/Week-3/Solution/Car.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Practicum/Week-3/Solution/Car.h" beforeDir="false" afterPath="$PROJECT_DIR$/../../Practicum/Week-3/Solution/Car.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Practicum/Week-3/Solution/Parking.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../Practicum/Week-3/Solution/Parking.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Practicum/Week-3/Solution/Parking.h" beforeDir="false" afterPath="$PROJECT_DIR$/../../Practicum/Week-3/Solution/Parking.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Practicum/Week-3/Solution/Person.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../Practicum/Week-3/Solution/Person.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Practicum/Week-3/Solution/Person.h" beforeDir="false" afterPath="$PROJECT_DIR$/../../Practicum/Week-3/Solution/Person.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Practicum/Week-3/Solution/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../Practicum/Week-3/Solution/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Practicum/Week-4/Debug/Week-4.log" beforeDir="false" afterPath="$PROJECT_DIR$/../../Practicum/Week-4/Debug/Week-4.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Practicum/Week-4/Debug/Week-4.tlog/Week-4.lastbuildstate" beforeDir="false" afterPath="$PROJECT_DIR$/../../Practicum/Week-4/Debug/Week-4.tlog/Week-4.lastbuildstate" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Practicum/Week-4/Dictionary.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../Practicum/Week-4/Dictionary.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Practicum/Week-4/Dictionary.h" beforeDir="false" afterPath="$PROJECT_DIR$/../../Practicum/Week-4/Dictionary.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Practicum/Week-4/Line.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../Practicum/Week-4/Line.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Practicum/Week-4/Line.h" beforeDir="false" afterPath="$PROJECT_DIR$/../../Practicum/Week-4/Line.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Practicum/Week-4/Pair.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../Practicum/Week-4/Pair.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Practicum/Week-4/Pair.h" beforeDir="false" afterPath="$PROJECT_DIR$/../../Practicum/Week-4/Pair.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Practicum/Week-4/Point.h" beforeDir="false" afterPath="$PROJECT_DIR$/../../Practicum/Week-4/Point.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Practicum/Week-4/Time.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../Practicum/Week-4/Time.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Practicum/Week-4/Time.h" beforeDir="false" afterPath="$PROJECT_DIR$/../../Practicum/Week-4/Time.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Practicum/Week-4/Week-4.sln" beforeDir="false" afterPath="$PROJECT_DIR$/../../Practicum/Week-4/Week-4.sln" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Practicum/Week-4/Week-4.vcxproj" beforeDir="false" afterPath="$PROJECT_DIR$/../../Practicum/Week-4/Week-4.vcxproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Practicum/Week-4/Week-4.vcxproj.filters" beforeDir="false" afterPath="$PROJECT_DIR$/../../Practicum/Week-4/Week-4.vcxproj.filters" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Practicum/Week-4/Week-4.vcxproj.user" beforeDir="false" afterPath="$PROJECT_DIR$/../../Practicum/Week-4/Week-4.vcxproj.user" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Practicum/Week-4/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../Practicum/Week-4/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Practicum/Week-5/Debug/Week-5.log" beforeDir="false" afterPath="$PROJECT_DIR$/../../Practicum/Week-5/Debug/Week-5.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Practicum/Week-5/Debug/Week-5.tlog/Week-5.lastbuildstate" beforeDir="false" afterPath="$PROJECT_DIR$/../../Practicum/Week-5/Debug/Week-5.tlog/Week-5.lastbuildstate" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Practicum/Week-5/Matrix.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../Practicum/Week-5/Matrix.hpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Practicum/Week-5/Triangle.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../Practicum/Week-5/Triangle.hpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Practicum/Week-5/Week-5.sln" beforeDir="false" afterPath="$PROJECT_DIR$/../../Practicum/Week-5/Week-5.sln" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Practicum/Week-5/Week-5.vcxproj" beforeDir="false" afterPath="$PROJECT_DIR$/../../Practicum/Week-5/Week-5.vcxproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Practicum/Week-5/Week-5.vcxproj.filters" beforeDir="false" afterPath="$PROJECT_DIR$/../../Practicum/Week-5/Week-5.vcxproj.filters" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Practicum/Week-5/Week-5.vcxproj.user" beforeDir="false" afterPath="$PROJECT_DIR$/../../Practicum/Week-5/Week-5.vcxproj.user" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Practicum/Week-5/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../Practicum/Week-5/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Seminar/Mika/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../Seminar/Mika/main.cpp" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../../.." />
+  </component>
+  <component name="IgnoredFileRootStore">
+    <option name="generatedRoots">
+      <set>
+        <option value="$PROJECT_DIR$/.idea" />
+      </set>
+    </option>
+  </component>
+  <component name="ProjectId" id="1aXaCmQQtPSJZaHRBmEhYZTp28s" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+  </component>
+  <component name="RunManager">
+    <configuration name="String" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="String" TARGET_NAME="String" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="String" RUN_TARGET_NAME="String">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d47f9f1f-366b-4f0b-b24e-c2403d9752ec" name="Default Changelist" comment="" />
+      <created>1586884266617</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1586884266617</updated>
+      <workItem from="1586884267754" duration="3040000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state width="1821" height="344" key="GridCell.Tab.0.bottom" timestamp="1586887308335">
+      <screen x="53" y="27" width="1867" height="1053" />
+    </state>
+    <state width="1821" height="344" key="GridCell.Tab.0.bottom/53.27.1867.1053@53.27.1867.1053" timestamp="1586887308335" />
+    <state width="1821" height="344" key="GridCell.Tab.0.center" timestamp="1586887308334">
+      <screen x="53" y="27" width="1867" height="1053" />
+    </state>
+    <state width="1821" height="344" key="GridCell.Tab.0.center/53.27.1867.1053@53.27.1867.1053" timestamp="1586887308334" />
+    <state width="1821" height="344" key="GridCell.Tab.0.left" timestamp="1586887308333">
+      <screen x="53" y="27" width="1867" height="1053" />
+    </state>
+    <state width="1821" height="344" key="GridCell.Tab.0.left/53.27.1867.1053@53.27.1867.1053" timestamp="1586887308333" />
+    <state width="1821" height="344" key="GridCell.Tab.0.right" timestamp="1586887308334">
+      <screen x="53" y="27" width="1867" height="1053" />
+    </state>
+    <state width="1821" height="344" key="GridCell.Tab.0.right/53.27.1867.1053@53.27.1867.1053" timestamp="1586887308334" />
+    <state width="1821" height="344" key="GridCell.Tab.1.bottom" timestamp="1586887308338">
+      <screen x="53" y="27" width="1867" height="1053" />
+    </state>
+    <state width="1821" height="344" key="GridCell.Tab.1.bottom/53.27.1867.1053@53.27.1867.1053" timestamp="1586887308338" />
+    <state width="1821" height="344" key="GridCell.Tab.1.center" timestamp="1586887308338">
+      <screen x="53" y="27" width="1867" height="1053" />
+    </state>
+    <state width="1821" height="344" key="GridCell.Tab.1.center/53.27.1867.1053@53.27.1867.1053" timestamp="1586887308338" />
+    <state width="1821" height="344" key="GridCell.Tab.1.left" timestamp="1586887308335">
+      <screen x="53" y="27" width="1867" height="1053" />
+    </state>
+    <state width="1821" height="344" key="GridCell.Tab.1.left/53.27.1867.1053@53.27.1867.1053" timestamp="1586887308335" />
+    <state width="1821" height="344" key="GridCell.Tab.1.right" timestamp="1586887308338">
+      <screen x="53" y="27" width="1867" height="1053" />
+    </state>
+    <state width="1821" height="344" key="GridCell.Tab.1.right/53.27.1867.1053@53.27.1867.1053" timestamp="1586887308338" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/main.cpp</url>
+          <line>22</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

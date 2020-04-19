@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30002.166
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Stay at home", "Stay at home.vcxproj", "{794F2294-2B5B-4924-A47F-720FB187DBA9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{794F2294-2B5B-4924-A47F-720FB187DBA9}.Debug|x64.ActiveCfg = Debug|x64
+		{794F2294-2B5B-4924-A47F-720FB187DBA9}.Debug|x64.Build.0 = Debug|x64
+		{794F2294-2B5B-4924-A47F-720FB187DBA9}.Debug|x86.ActiveCfg = Debug|Win32
+		{794F2294-2B5B-4924-A47F-720FB187DBA9}.Debug|x86.Build.0 = Debug|Win32
+		{794F2294-2B5B-4924-A47F-720FB187DBA9}.Release|x64.ActiveCfg = Release|x64
+		{794F2294-2B5B-4924-A47F-720FB187DBA9}.Release|x64.Build.0 = Release|x64
+		{794F2294-2B5B-4924-A47F-720FB187DBA9}.Release|x86.ActiveCfg = Release|Win32
+		{794F2294-2B5B-4924-A47F-720FB187DBA9}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CEB9A5C5-8240-4CE8-B7BC-6FEF5DB40AF3}
+	EndGlobalSection
+EndGlobal
