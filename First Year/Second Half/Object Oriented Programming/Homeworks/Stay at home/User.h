@@ -32,6 +32,7 @@ public:
     void remove_challenge_from_user(Challenge*);
 
     void print() const;
+    void print_user_challenges() const;
 };
 
 

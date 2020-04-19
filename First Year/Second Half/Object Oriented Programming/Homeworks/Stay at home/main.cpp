@@ -12,7 +12,7 @@ int main() {
     q.print();
     m.print(); */
     Core core;
-    std::cout << "To end the program, please write 'end'. Thank you!\n You can use info to learn what commands you can use.\n";
+    std::cout << "To end the program, please write 'end'. Thank you!\n\tYou can use info to learn what commands you can use.\n";
     std::cin.getline(_a, 101);
     while (strcmp(_a, "end") != 0)
     {
@@ -32,12 +32,12 @@ int main() {
         else if (strcmp(t.tokens[0], "print_all_users") == 0) {
             core.print_all_users();
         }
-        //else if (strcmp(t.tokens[0], "finish") == 0) {
-        //    core.finish_challenge(t);
-        //}
-        //else if (strcmp(t.tokens[0], "list_by") == 0) {
-        //    core.list_challenge(t);
-        //}
+        else if (strcmp(t.tokens[0], "finish") == 0) {
+            core.finish_challenge(t);
+        }
+        else if (strcmp(t.tokens[0], "list_by") == 0) {
+            core.list_challenge(t);
+        }
         //else if (strcmp(t.tokens[0], "load") == 0) {
         //    core.load_file(t);
         //}

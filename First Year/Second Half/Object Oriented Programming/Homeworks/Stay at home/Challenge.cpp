@@ -7,7 +7,7 @@
 #include <cassert>
 #include "Challenge.h"
 
-const unsigned MAX_CHALLENGE_NAME_LENGTH = 31;
+const unsigned MAX_CHALLENGE_NAME_LENGTH = 32;
 
 Challenge::Challenge()
 {
@@ -19,7 +19,7 @@ Challenge::Challenge()
 
 Challenge::Challenge(const char* _name)
 {
-    assert(strlen(_name) > MAX_CHALLENGE_NAME_LENGTH);
+    assert(strlen(_name) < MAX_CHALLENGE_NAME_LENGTH);
 
     this->name = this->copy_challenge_memory(_name);
     this->status = this->copy_challenge_memory("new");
@@ -95,14 +95,20 @@ void Challenge::update_rating(double _rating)
 
 void Challenge::update_status()
 {
-    if (this->times_called > 10 && strcmp(this->status, "old") == 0) {
+    this->times_called++;
+    if (this->times_called > 10 && strcmp(this->status, "old") != 0) {
         this->del_challenge_memory("status");
         this->copy_challenge_memory("old");
     }
-    else if (this->times_called > 1 && strcmp(this->status, "quite recently") == 0) {
+    else if (this->times_called > 1 && strcmp(this->status, "quite recently") != 0) {
         this->del_challenge_memory("status");
         this->copy_challenge_memory("quite recently");
     }
+}
+
+void Challenge::print_ch() const
+{
+    std::cout << this->name << "  " << this->status << "  " << this->rating << "  " << this->times_called << "\n";
 }
 
 #endif //! CHALLENGE_CPP

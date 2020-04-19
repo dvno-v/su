@@ -9,6 +9,7 @@ private:
     char* name;
     char* status;
     unsigned times_called;
+    unsigned times_completed;
 
     void del_challenge_memory(char const*);
     char* copy_challenge_memory(char const*);
@@ -24,6 +25,8 @@ public:
 
     void update_rating(double);
     void update_status();
+
+    void print_ch()const;
 };
 
 

@@ -1,8 +1,6 @@
 ﻿  Challenge.cpp
   Core.cpp
-  main.cpp
-  Tokens.cpp
-C:\Personal Files\Study\SU\First Year\Second Half\Object Oriented Programming\Homeworks\Stay at home\Tokens.cpp(20,28): warning C4018: '<': signed/unsigned mismatch
   User.cpp
+  main.cpp
   Generating Code...
-  Stay at home.vcxproj -> C:\Personal Files\Study\SU\First Year\Second Half\Object Oriented Programming\Homeworks\Stay at home\Debug\Stay at home.exe
+  Stay at home.vcxproj -> D:\Study\SU\First Year\Second Half\Object Oriented Programming\Homeworks\Stay at home\Debug\Stay at home.exe
