@@ -1,2 +1,3 @@
-﻿  main.cpp
-  Stay at home.vcxproj -> C:\Personal Files\Study\SU\First Year\Second Half\Object Oriented Programming\Homeworks\Stay at home\Debug\Stay at home.exe
+﻿  Core.cpp
+D:\Study\SU\First Year\Second Half\Object Oriented Programming\Homeworks\Stay at home\Core.cpp(24,28): warning C4018: '<': signed/unsigned mismatch
+  Stay at home.vcxproj -> D:\Study\SU\First Year\Second Half\Object Oriented Programming\Homeworks\Stay at home\Debug\Stay at home.exe

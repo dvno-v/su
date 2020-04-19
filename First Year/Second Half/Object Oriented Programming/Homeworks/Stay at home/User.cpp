@@ -5,12 +5,13 @@
 #include <iostream>
 #include <cstring>
 #include <cassert>
+#include <climits>
 #include "User.h"
 
 const unsigned MAX_EMAIL_LENGTH = 101;
 const unsigned MAX_AGE = 90;
 const unsigned MAX_NAME_LENGTH = 101;
-const unsigned NO_AGE = -404;
+const unsigned NO_AGE = UINT_MAX;
 
 
 char* User::copy_user_memory(char const* source) {
@@ -129,8 +130,8 @@ void User::remove_challenge_from_user(Challenge* finished) {
 
 
 void User::print() const {
-    // std::cout << this->name << "   " << this->age << "   "<< this->email << '\n';
     std::cout << this->unique_id << '\n';
+    std::cout << this->name << "   " << this->age << "   "<< this->email << '\n';
 }
 
 #endif // !USER_CPP

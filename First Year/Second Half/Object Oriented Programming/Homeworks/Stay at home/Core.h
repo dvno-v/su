@@ -41,6 +41,7 @@ public:
     void print_users_by_given_name(const char*) const;
     
     void print_info_for_core() const;
+    void print_all_users() const;
 
 };
 

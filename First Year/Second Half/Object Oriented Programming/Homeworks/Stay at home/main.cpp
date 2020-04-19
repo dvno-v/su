@@ -44,6 +44,8 @@ int main() {
         t.delete_memory(); 
         std::cin.getline(_a, 101);
     }
+    
+    core.print_all_users();
 
     return 0;
 }

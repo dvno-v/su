@@ -61,7 +61,18 @@ Core::Core() {
     this->challenges_size = 0;
 }
 Core::~Core() {
-    
+    for (unsigned i = 0; i < this->users_size; i++)
+    {
+        std::cout << "deleting user-" << i + 1 << '\n';
+        delete this->users[i];
+    }
+    std::cout << "deleting users array\n";
+    this->delete_part_of_core_memory("users");
+    for (unsigned i = 0; i < this->challenges_size; i++)
+    {
+        delete this->known_challenges[i];
+    }
+    this->delete_part_of_core_memory("challenges");
 }
 
 void Core::parse_input(const char* input, Tokens& t) {
@@ -91,21 +102,42 @@ void Core::parse_input(const char* input, Tokens& t) {
 }
 
 void Core::register_user(Tokens& t) {
+    User* a = nullptr;
     //incase the registration is not full (there is no email or no age)
     if (t.number_of_tokens == 4) {
-        User a = new User(t.tokens[1], atoi(t.tokens[2]), t.tokens[3]);
+        a = new User(t.tokens[1], atoi(t.tokens[2]), t.tokens[3]);
     }
     else if (t.number_of_tokens == 3) {
         if (atoi(t.tokens[2]) == 0) {
-            User
+            a = new User(t.tokens[1], t.tokens[2]);
+        }
+        else {
+            a = new User(t.tokens[1], atoi(t.tokens[2]));
         }
     }
+    else if (t.number_of_tokens == 2) {
+        a = new User(t.tokens[1]);
+    }
+    User** temp = new User * [this->users_size + 1];
+    for (size_t i = 0; i < this->users_size; i++)
+    {
+        temp[i] = this->users[i];
+    }
+    this->delete_part_of_core_memory("users");
+    temp[this->users_size++] = a;
+    this->users = temp;
 }
 
 void Core::print_info_for_core() const {
     std::cout << "The program has these commands:\n -profile_info\n -register\n -finish\n -list_by\n -load\n -challenge\n";
 }
 
+void Core::print_all_users()const {
+    for (unsigned i = 0; i < this->users_size; i++)
+    {
+        this->users[i]->print();
+    }
+}
 
 
 
