@@ -20,6 +20,8 @@ public:
     Challenge(const char*, unsigned, double);
     ~Challenge();
 
+    const char* get_challenge_name() const;
+
     void update_rating(double);
     void update_status();
 };

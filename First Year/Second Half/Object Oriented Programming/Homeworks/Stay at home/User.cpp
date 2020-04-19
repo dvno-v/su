@@ -109,9 +109,14 @@ User::~User() {
     this->del_user_memory("challenges");
 }
 
-unsigned User::get_unique_id() const {
+const unsigned User::get_unique_id() const {
     return this->unique_id;
 }
+
+const char* User::get_name() const {
+    return this->name;
+}
+
 
 void User::add_challenge(Challenge* to_add) {
     Challenge** temp = new Challenge * [this->number_of_challenges + 1];
@@ -130,8 +135,14 @@ void User::remove_challenge_from_user(Challenge* finished) {
 
 
 void User::print() const {
-    std::cout << this->unique_id << '\n';
-    std::cout << this->name << "   " << this->age << "   "<< this->email << '\n';
+    std::cout << "Name: " << this->name << "\nAge: ";
+    if (this->age == NO_AGE) {
+        std::cout << "Unknown";
+    }
+    else {
+        std::cout << this->age;
+    }
+    std::cout << "\nEmail: " << this->email << "\nId: " << this->unique_id << "\n";
 }
 
 #endif // !USER_CPP

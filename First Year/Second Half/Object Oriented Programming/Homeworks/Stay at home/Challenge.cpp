@@ -79,6 +79,12 @@ void Challenge::del_challenge_memory(char const* to_delete) {
     }
 }
 
+
+const char* Challenge::get_challenge_name() const {
+    return this->name;
+}
+
+
 void Challenge::update_rating(double _rating)
 {
     double new_rating = this->rating * this->times_called;

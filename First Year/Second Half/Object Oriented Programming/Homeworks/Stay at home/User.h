@@ -25,7 +25,8 @@ public:
     User(const User&);
     ~User();
 
-    unsigned get_unique_id() const;
+    const unsigned get_unique_id() const;
+    const char* get_name() const;
 
     void add_challenge(Challenge*);
     void remove_challenge_from_user(Challenge*);

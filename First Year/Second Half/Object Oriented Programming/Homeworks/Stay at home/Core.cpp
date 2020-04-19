@@ -1,4 +1,4 @@
-#ifndef CORE_CPP
+ #ifndef CORE_CPP
 
 #define CORE_CPP
 
@@ -9,38 +9,7 @@
 
 
 //Tokens logic
-void Tokens::delete_memory() {
-    for (unsigned i = 0; i < this->number_of_tokens; i++)
-    {
-        delete[] this->tokens[i];
-    }
-    delete[] this->tokens;
-    delete[] this->size_of_token;
-}
 
-unsigned Tokens::get_number_of_tokens(const char* input)
-{
-    int length = strlen(input) + 1, number_of_tokens = 0;
-    for (unsigned i = 0; i < length; i++)
-    {
-        if (input[i] == ' ' || input[i] == '\0')
-        {
-            ++number_of_tokens;
-        }
-    }
-    return number_of_tokens;
-}
-
-void Tokens::print() const {
-    for (unsigned i = 0; i < this->number_of_tokens; i++)
-    {
-        for (unsigned k = 0; k < this->size_of_token[i]; k++)
-        {
-            std::cout << this->tokens[i][k];
-        }
-        std::cout << '\n';
-    }
-}
 //End of tokens logic
 
 void Core::delete_part_of_core_memory(char const* to_delete) {
@@ -54,12 +23,23 @@ void Core::delete_part_of_core_memory(char const* to_delete) {
     }
 }
 
+bool Core::contains_challenge(const char* challenge_name) const {
+    for (unsigned i = 0; i < this->challenges_size; i++)
+    {
+        if (strcmp(this->known_challenges[i]->get_challenge_name(), challenge_name) == 0) {
+            return true;
+        }
+    }
+    return false;
+}
+
 Core::Core() {
     this->users = nullptr;
     this->users_size = 0;
     this->known_challenges = nullptr;
     this->challenges_size = 0;
 }
+
 Core::~Core() {
     for (unsigned i = 0; i < this->users_size; i++)
     {
@@ -98,6 +78,22 @@ void Core::parse_input(const char* input, Tokens& t) {
             //std::cout << "in here" << '\n';
             temp_str[temp_str_index++] = input[i];
         }
+    }
+}
+
+void Core::get_profile_info(const Tokens& t) const{
+    for (unsigned i = 0; i < this->users_size; i++)
+    {
+        if (strcmp(t.tokens[1], this->users[i]->get_name()) == 0) {
+            std::cout << i + 1 << ") ";
+            this->users[i]->print();
+        }
+    }
+}
+
+void Core::challenge(const Tokens& t) {
+    if (!this->contains_challenge(t.tokens[2])) {
+
     }
 }
 

@@ -26,9 +26,12 @@ int main() {
         if (strcmp(t.tokens[0], "register") == 0) {
             core.register_user(t);
         }
-        //else if (strcmp(t.tokens[0], "profile_info") == 0) {
-        //    core.get_profile_info(t);
-        //}
+        else if (strcmp(t.tokens[0], "profile_info") == 0) {
+            core.get_profile_info(t);
+        }
+        else if (strcmp(t.tokens[0], "print_all_users") == 0) {
+            core.print_all_users();
+        }
         //else if (strcmp(t.tokens[0], "finish") == 0) {
         //    core.finish_challenge(t);
         //}
@@ -38,14 +41,12 @@ int main() {
         //else if (strcmp(t.tokens[0], "load") == 0) {
         //    core.load_file(t);
         //}
-        //else if (strcmp(t.tokens[0], "challenge") == 0) {
-        //    core.challenge(t);
-        //}
+        else if (strcmp(t.tokens[0], "challenge") == 0) {
+            core.challenge(t);
+        }
         t.delete_memory(); 
         std::cin.getline(_a, 101);
     }
     
-    core.print_all_users();
-
     return 0;
 }
