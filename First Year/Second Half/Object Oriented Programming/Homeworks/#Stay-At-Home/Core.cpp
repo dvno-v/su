@@ -6,8 +6,17 @@
 #include <cstring>
 #include <iostream>
 
-void Core::parse_input(const char* input){
-    Tokens t;
+void Tokens::delete_memory(){
+    for (unsigned i = 0; i < this->number_of_tokens; i++)
+    {
+        delete[] this->tokens[i];
+    }
+    delete[] this->tokens;
+    delete[] this->size_of_token;
+    
+}
+
+void Core::parse_input(const char* input, Tokens& t){
     int len = strlen(input), temp_str_index = 0;
     char temp_str[101];
     for (int i = 0; i < len + 1; i++)
@@ -25,6 +34,7 @@ void Core::parse_input(const char* input){
         }
     }
 }
+
 
 
 Core::Core(){

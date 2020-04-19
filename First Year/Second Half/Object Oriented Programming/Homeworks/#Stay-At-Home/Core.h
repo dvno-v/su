@@ -10,6 +10,7 @@ struct Tokens
     char** tokens;
     unsigned number_of_tokens;
     unsigned* size_of_token;
+    void delete_memory();
 };
 
 class Core
@@ -24,7 +25,7 @@ public:
     // Core(User*, Challenge**);
     ~Core();
 
-    void parse_input(const char*);
+    void parse_input(const char*, Tokens&);
 };
 
 #endif //!CORE_H

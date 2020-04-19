@@ -35,6 +35,7 @@ void User::del_memory(char const * to_delete){
  }
 
 User::User(const char* _name , unsigned _age, const char* _email){
+    
     assert(strlen(_name) < MAX_NAME_LENGTH);
     assert(strlen(_email) < MAX_EMAIL_LENGTH);
     assert(_age <= MAX_AGE && _age >=1);
@@ -48,6 +49,7 @@ User::User(const char* _name , unsigned _age, const char* _email){
 }
 
 User::User(const char* _name , unsigned _age){
+    
     assert(strlen(_name) < MAX_NAME_LENGTH);
     assert(_age <= MAX_AGE && _age >=1);
 
@@ -60,6 +62,7 @@ User::User(const char* _name , unsigned _age){
 }
 
 User::User(const char* _name, const char* _email){
+    
     assert(strlen(_name) < MAX_NAME_LENGTH);
     assert(strlen(_email) < MAX_EMAIL_LENGTH);
 
@@ -72,6 +75,7 @@ User::User(const char* _name, const char* _email){
 }
 
 User::User(const char* _name){
+    
     assert(strlen(_name) < MAX_NAME_LENGTH);
 
     this->unique_id = reinterpret_cast<unsigned long>(this);
@@ -82,6 +86,21 @@ User::User(const char* _name){
     this->challenges = nullptr;
 }
 
+User::User(const User& _other){
+
+    this->unique_id = reinterpret_cast<unsigned long>(this);
+    this->name = copy_memory(_other.name);
+    this->age = _other.age;
+    this->email = copy_memory(_other.email);
+
+    this->challenges = new Challenge*[_other.number_of_challenges];
+    for (unsigned i = 0; i < _other.number_of_challenges; i++)
+    {
+        this->challenges[i] = _other.challenges[i];
+    }
+    this->number_of_challenges = _other.number_of_challenges;
+    
+}
 
 User::~User(){
     this->del_memory("name");
@@ -93,11 +112,20 @@ unsigned User::get_unique_id() const{
     return this->unique_id;
 }
 
-// bool User::add_challenge(const char * challenge_name ){
+void User::add_challenge(Challenge * to_add){
+    Challenge** temp = new Challenge*[this->number_of_challenges + 1];
+    for (unsigned i = 0; i < this->number_of_challenges; i++)
+    {
+        temp[i] = this->challenges[i];
+    }
+    temp[this->number_of_challenges] = to_add;
+    this->del_memory("challenge");
+    this->challenges = temp;
+}
+
+void User::finish_challenge(Challenge* finished){
     
-// }
-
-
+}
 
 
 void User::print() const{

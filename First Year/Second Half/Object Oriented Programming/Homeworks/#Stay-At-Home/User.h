@@ -22,12 +22,13 @@ public:
     User(const char*, unsigned);
     User(const char*, const char*);
     User(const char*);
+    User(const User&);
     ~User();
 
     unsigned get_unique_id() const;
 
-    bool add_challenge(char const *);
-    bool remove_challenge(char const *);
+    void add_challenge(Challenge*);
+    void finish_challenge(Challenge*);
     
     void print() const;
 };

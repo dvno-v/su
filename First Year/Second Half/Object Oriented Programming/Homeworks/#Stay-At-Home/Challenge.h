@@ -16,7 +16,7 @@ private:
 public:
     Challenge();
     ~Challenge();
-    void finish_challenge();
+
 };
 
 
