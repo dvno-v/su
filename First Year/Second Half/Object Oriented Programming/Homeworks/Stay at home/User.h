@@ -30,6 +30,7 @@ public:
 
     void add_challenge(Challenge*);
     void remove_challenge_from_user(Challenge*);
+    bool has_challenge(const char*) const;
 
     void print() const;
     void print_user_challenges() const;

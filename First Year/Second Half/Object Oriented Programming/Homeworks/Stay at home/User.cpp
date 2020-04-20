@@ -150,6 +150,18 @@ void User::remove_challenge_from_user(Challenge* finished) {
 	}
 }
 
+
+bool User::has_challenge(const char* challenge_name) const {
+	for (unsigned i = 0; i < this->number_of_challenges; i++)
+	{
+		if (strcmp(this->challenges[i]->get_challenge_name(), challenge_name) == 0) {
+			return true;
+		}
+	}
+	return false;
+}
+
+
 void User::print() const {
 	std::cout << "Name: " << this->name << "\nAge: ";
 	if (this->age == NO_AGE) {
