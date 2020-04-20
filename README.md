@@ -1,2 +1,2 @@
 # su
-CS course materials i find
+The whole Computer Science course materials 
