@@ -23,7 +23,8 @@ Challenge::Challenge(const char* _name)
 
     this->name = this->copy_challenge_memory(_name);
     this->status = this->copy_challenge_memory("new");
-    this->times_called = 1;
+    this->times_called = 0;
+    this->times_completed = 0;
     this->rating = 0;
 
 }
@@ -39,7 +40,7 @@ Challenge::Challenge(const Challenge& _other)
 Challenge::Challenge(const char* _name, unsigned _times_called , double _rating)
 {
     assert(strlen(_name) > MAX_CHALLENGE_NAME_LENGTH);
-    assert(_rating >= 5.0 && _rating <= 10);
+    assert(_rating >= -5.0 && _rating <= 10);
 
     this->name = this->copy_challenge_memory(_name);
     this->times_called = _times_called;
@@ -87,22 +88,22 @@ const char* Challenge::get_challenge_name() const {
 
 void Challenge::update_rating(double _rating)
 {
-    double new_rating = this->rating * this->times_called;
+    double new_rating = this->rating * this->times_completed;
     new_rating += _rating;
-    new_rating /= (++this->times_called);
+    new_rating /= (++this->times_completed);
     this->rating = new_rating;
 }
 
 void Challenge::update_status()
 {
-    this->times_called++;
+    ++this->times_called;
     if (this->times_called > 10 && strcmp(this->status, "old") != 0) {
         this->del_challenge_memory("status");
-        this->copy_challenge_memory("old");
+        this->status = this->copy_challenge_memory("old");
     }
     else if (this->times_called > 1 && strcmp(this->status, "quite recently") != 0) {
         this->del_challenge_memory("status");
-        this->copy_challenge_memory("quite recently");
+        this->status = this->copy_challenge_memory("quite recently");
     }
 }
 

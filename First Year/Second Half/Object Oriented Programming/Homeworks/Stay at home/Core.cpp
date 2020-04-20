@@ -141,7 +141,40 @@ void Core::challenge(const Tokens& t) {
 
         for (unsigned i = 3; i < t.number_of_tokens; i++)
         {
-            this->users[this->get_user_index(t.tokens[i])]->add_challenge(ch);
+            if (this->has_more_than_one_user_with_name(t.tokens[i])) {
+                std::cout << "The name " << t.tokens[i] << " is connected to more than one account.\nPlease specify which one you want to challenge. (Type \"all\" to challenge all the users, including the challenger)\n";
+                this->print_users_by_given_name(t.tokens[i]);
+                char temp[101];
+                std::cin.getline(temp, 101);
+                if (strcmp(temp, "all") == 0) {
+                    for (unsigned i = 0; i < this->users_size; i++)
+                    {
+                        if (strcmp(this->users[i]->get_name(), t.tokens[i]) == 0) {
+                            this->users[i]->add_challenge(ch);
+                            ch->update_status();
+                        }
+                    }
+                }
+                else {
+                    bool found_user = false;
+                    for (size_t i = 0; i < this->users_size; i++)
+                    {
+                        if (this->users[i]->get_unique_id() == std::stoul(temp)) {
+                            this->users[i]->add_challenge(ch);
+                            ch->update_status();
+                            found_user = true;
+                        }
+                    }
+                    if (!found_user) {
+                        std::cout << "Invalid ID. No challenge added.\n";
+                    }
+                }
+            }
+            else
+            {
+                this->users[this->get_user_index(t.tokens[i])]->add_challenge(ch);
+                ch->update_status();
+            }
         }
     }
     else {
@@ -149,6 +182,7 @@ void Core::challenge(const Tokens& t) {
         for (unsigned i = 3; i < t.number_of_tokens; i++)
         {
             this->users[this->get_user_index(t.tokens[i])]->add_challenge(ch);
+            ch->update_status();
         }
     }
 }
@@ -182,27 +216,46 @@ void Core::register_user(Tokens& t) {
 
 void Core::finish_challenge(const Tokens& t) {
     bool found_user = false;
-    unsigned challenge_index = this->get_challenge_index(t.tokens[1]);
-    for (unsigned i = 0; i < this->users_size; i++)
+    int challenge_index = this->get_challenge_index(t.tokens[1]);
+    if (challenge_index == -1) {
+        std::cout << "No such challenge found.\n"; return;
+    }
+    for (unsigned i = 0; i < this->users_size && !found_user; i++)
     {
         if (std::stoul(t.tokens[2]) == this->users[i]->get_unique_id()) {
-            this->users[i]->
-                remove_challenge_from_user(this->known_challenges[challenge_index]);
-            found_user = true;
+
+            if (this->users[i]->has_challenge(t.tokens[1])) {
+                this->users[i]->
+                    remove_challenge_from_user(this->known_challenges[challenge_index]);
+                found_user = true;
+            }
+            else {
+                std::cout << "User has no such challenge.\n"; return;
+            }
         }
     }
     if (!found_user) {
         std::cout << "User not found\n"; return;
     }
     this->known_challenges[challenge_index]->update_rating(atof(t.tokens[3]));
-    this->known_challenges[challenge_index]->update_status();
+    
 
 }
-
+//TO-DO CHANGE
 void Core::list_challenge(const Tokens& t) {
     for (unsigned i = 0; i < this->challenges_size; i++)
     {
         this->known_challenges[i]->print_ch();
+    }
+}
+
+void Core::print_users_by_given_name(const char* name) const
+{
+    for (unsigned i = 0; i < this->users_size; i++)
+    {
+        if (strcmp(this->users[i]->get_name(), name) == 0) {
+            this->users[i]->print();
+        }
     }
 }
 
@@ -215,6 +268,21 @@ void Core::print_all_users()const {
     {
         this->users[i]->print();
     }
+}
+
+bool Core::has_more_than_one_user_with_name(const char* name) const
+{
+    int occur = 0;
+    for (unsigned i = 0; i < this->users_size; i++)
+    {
+        if (strcmp(this->users[i]->get_name(), name) == 0) {
+            ++occur;
+        }
+        if(occur >= 2){
+            return true;
+        }
+    }
+    return false;
 }
 
 

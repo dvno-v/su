@@ -123,7 +123,6 @@ void User::add_challenge(Challenge* to_add) {
 
 void User::remove_challenge_from_user(Challenge* finished) {
 	if (this->number_of_challenges >= 2) {
-		Challenge** temp = new Challenge * [this->number_of_challenges - 1];
 		bool passed_ch = false;
 		for (unsigned i = 0; i < number_of_challenges; i++)
 		{
@@ -132,15 +131,12 @@ void User::remove_challenge_from_user(Challenge* finished) {
 			}
 			if (passed_ch)
 			{
-				temp[i] = this->challenges[i + 1];
+				this->challenges[i] = this->challenges[i + 1];
 			}
 			else {
-				temp[i] = this->challenges[i];
+				this->challenges[i] = this->challenges[i];
 			}
 		}
-
-		this->del_user_memory("challenges");
-		this->challenges = temp;
 		--this->number_of_challenges;
 	}
 	else {

@@ -37,6 +37,7 @@ public:
     
     void print_info_for_core() const;
     void print_all_users() const;
+    bool has_more_than_one_user_with_name(const char*) const;
 
 };
 
