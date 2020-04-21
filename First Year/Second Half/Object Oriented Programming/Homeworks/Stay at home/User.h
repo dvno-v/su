@@ -16,7 +16,6 @@ private:
 
     void del_user_memory(char const*);
     char* copy_user_memory(char const*);
-    void init_challenge_list();
 public:
     User(const char*, unsigned, const char*);
     User(const char*, unsigned);

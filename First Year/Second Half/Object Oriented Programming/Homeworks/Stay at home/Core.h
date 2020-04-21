@@ -17,13 +17,15 @@ private:
      void delete_part_of_core_memory(const char*);
      int get_challenge_index(const char*) const;
      bool is_valid_challenge(const Tokens&) const;
+     bool is_valid_email(const char*, unsigned) const;
      int get_user_index(const char*) const;
      void add_challenge_to_core(Challenge*);
+     void add_user(User*);
 public:
     Core();
-    Core(User**);
-    Core(Challenge**);
-    Core(User**, Challenge**);
+    Core(User**, unsigned);
+    Core(Challenge**, unsigned);
+    Core(User**, unsigned, Challenge**, unsigned);
     ~Core();
 
     void register_user(Tokens&);

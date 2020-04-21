@@ -18,10 +18,12 @@ public:
     Challenge();
     Challenge(const char*);
     Challenge(const Challenge&);
-    Challenge(const char*, unsigned, double);
+    Challenge(const char*, unsigned, unsigned, double);
+    Challenge(const char*, const char*, unsigned, unsigned, double);
     ~Challenge();
 
     const char* get_challenge_name() const;
+    const unsigned get_times_called()const;
 
     void update_rating(double);
     void update_status();
