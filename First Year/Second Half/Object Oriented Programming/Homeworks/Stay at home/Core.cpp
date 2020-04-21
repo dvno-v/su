@@ -63,15 +63,6 @@ bool Core::is_valid_challenge(const Tokens& t) const
 {
     if(strlen(t.tokens[2]) > MAX_CHALLENGE_NAME_LENGTH || *(t.tokens[2]) != '#')
         return false;
-    // tokens[0] - 'challenge' token[1] - challenger tokens[2] - challenge, others -> the challenged 
-    for (unsigned i = 1; i < t.number_of_tokens; i++)
-    {
-        if (i == 2) 
-            continue;
-
-        if (this->get_user_index(t.tokens[i]) == -1)
-            return false;
-    }
     return true;
 }
 

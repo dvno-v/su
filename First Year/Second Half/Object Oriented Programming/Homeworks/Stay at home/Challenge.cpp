@@ -131,7 +131,7 @@ void Challenge::print_ch() const
 {
     std::cout << this->name 
         << std::setw(30 - strlen(this->name)) 
-        << this->status << std::setw(15 - strlen(this->status)) 
+        << this->status << std::setw(15) 
         << this->rating << std::setw(15 - (fabs((int)this->rating) / 10)) 
         << this->times_called << std::setw(15 - (fabs((int)this->rating) / 10)) 
         << this->times_completed << "\n";

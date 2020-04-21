@@ -18,7 +18,7 @@ int main() {
         core.parse_input(_a, t);
         //to-do add console responses;
         //ready
-        if (strcmp(t.tokens[0], "register") == 0) {
+        if (strcmp(t.tokens[0], "registration") == 0) {
             core.register_user(t);
         }//ready to-do change appearance 
         else if (strcmp(t.tokens[0], "profile_info") == 0) {
