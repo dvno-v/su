@@ -3,14 +3,7 @@
 #include "Core.h"
 
 int main() {
-    char a[] = "pesho", b[] = "p@abv.bg", _a[101] = "gosho pesho tosho";
-    /*User u(a, 10, b), c(a, 80, b), v(a, 10, b), n(a, 10, b), q(a, 10, b), m(a, b);
-    u.print();
-    c.print();
-    v.print();
-    n.print();
-    q.print();
-    m.print(); */
+    char _a[101];
     Core core;
     std::cout << "To end the program, please write 'end'. Thank you!\n\tYou can use info to learn what commands you can use.\n";
     std::cin.getline(_a, 101);
@@ -36,13 +29,13 @@ int main() {
         }//ready
         else if (strcmp(t.tokens[0], "finish") == 0) {
             core.finish_challenge(t);
-        }//to-do
+        }
         else if (strcmp(t.tokens[0], "list_by") == 0) {
             core.list_challenge(t);
         }
         else if (strcmp(t.tokens[0], "load") == 0) {
             core.load_file(t);
-        }//ready
+        }
         else if (strcmp(t.tokens[0], "challenge") == 0) {
             core.challenge(t);
         }

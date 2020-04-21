@@ -90,6 +90,47 @@ Core::Core() {
     this->challenges_size = 0;
 }
 
+Core::Core(User** _users, unsigned _number_of_users) {
+    for (unsigned i = 0; i < _number_of_users; i++)
+    {
+        this->add_user(_users[i]);
+    }
+    this->users_size = _number_of_users;
+}
+
+Core::Core(Challenge** _challenges, unsigned _challenges_size) {
+    for (unsigned i = 0; i < _challenges_size; i++)
+    {
+        this->add_challenge_to_core(_challenges[i]);
+    }
+    this->challenges_size = _challenges_size;
+}
+
+Core::Core(User** _users, unsigned _number_of_users, Challenge** _challenges, unsigned _challenges_size) {
+    for (unsigned i = 0; i < _number_of_users; i++)
+    {
+        this->add_user(_users[i]);
+    }
+    this->users_size = _number_of_users;
+
+    for (unsigned i = 0; i < _challenges_size; i++)
+    {
+        this->add_challenge_to_core(_challenges[i]);
+    }
+    this->challenges_size = _challenges_size;
+}
+
+Core::Core(const Core& _other)
+{
+    std::cout << "Ah ti piratche takova, ne moje da mi pipash qdroto!!!\n";
+}
+
+
+void Core::operator=(const Core&)
+{
+    std::cout << "Pak se opitvash. Ne moje da mi kopirash qdroto\n";
+}
+
 Core::~Core() {
     for (unsigned i = 0; i < this->users_size; i++)
     {
@@ -137,8 +178,10 @@ void Core::get_profile_info(const Tokens& t) const{
         if (strcmp(t.tokens[1], this->users[i]->get_name()) == 0) {
             std::cout << curr++ << ") ";
             this->users[i]->print();
+            std::cout << std::endl;
         }
     }
+    std::cout << std::endl;
 }
 
 void Core::challenge(const Tokens& t) {
@@ -167,9 +210,10 @@ void Core::challenge(const Tokens& t) {
                             if (!this->users[k]->has_challenge(ch->get_challenge_name())) {
                                 this->users[k]->add_challenge(ch);
                                 ch->update_status();
+                                std::cout << "Challenge added!\n";
                             }
                             else {
-                                std::cout << "User already has challenge\nThe challenge was not added";
+                                std::cout << "User " << this->users[k]->get_name() << "-" << this->users[k]->get_unique_id() << " already has challenge\nnThe challenge was not added";
                             }
                         }
                     }
@@ -182,10 +226,11 @@ void Core::challenge(const Tokens& t) {
                             if (!this->users[j]->has_challenge(ch->get_challenge_name())) {
                                 this->users[j]->add_challenge(ch);
                                 ch->update_status();
+                                std::cout << "Challenge added!\n";
                                 found_user = true;
                             }
                             else {
-                                std::cout << "User already has challenge\nnThe challenge was not added";
+                                std::cout << "User " << this->users[j]->get_name() << " already has challenge\nnThe challenge was not added";
                             }
                         }
                     }
@@ -200,9 +245,10 @@ void Core::challenge(const Tokens& t) {
                 if (!this->users[user_index]->has_challenge(ch->get_challenge_name())) {
                     this->users[user_index]->add_challenge(ch);
                     ch->update_status();
+                    std::cout << "Challenge added!\n";
                 }
                 else {
-                    std::cout << "User already has challenge\nnThe challenge was not added";
+                    std::cout << "User " << this->users[user_index]->get_name() << " already has challenge\nnThe challenge was not added";
                 }
             }
         }
@@ -215,9 +261,10 @@ void Core::challenge(const Tokens& t) {
             if (!this->users[user_index]->has_challenge(ch->get_challenge_name())) {
                 this->users[user_index]->add_challenge(ch);
                 ch->update_status();
+                std::cout << "Challenge added!\n";
             }
             else {
-                std::cout << "User already has challenge\nnThe challenge was not added";
+                std::cout << "User "<< this->users[user_index]->get_name() <<  " already has challenge\nnThe challenge was not added";
             }
         }
     }
@@ -231,6 +278,9 @@ void Core::register_user(Tokens& t) {
     }
     else if (t.number_of_tokens == 3) {
         if (atoi(t.tokens[2]) == 0) {
+            if (atoi(t.tokens[2]) > 90 && atoi(t.tokens[2]) < 0) {
+                std::cout << "Invalid age.\n";
+            }
             a = new User(t.tokens[1], t.tokens[2]);
         }
         else {
@@ -240,7 +290,13 @@ void Core::register_user(Tokens& t) {
     else if (t.number_of_tokens == 2) {
         a = new User(t.tokens[1]);
     }
-    this->add_user(a);
+    if (a != nullptr) {
+        this->add_user(a);
+        std::cout << "User registered!\n";
+    }
+    else {
+        std::cout << "Whoops. Something bad happened. User not registered\n";
+    }
 }
 
 void Core::finish_challenge(const Tokens& t) {
@@ -267,33 +323,33 @@ void Core::finish_challenge(const Tokens& t) {
         std::cout << "The given id isn’t valid. The user with this id do not exist.\n"; return;
     }
     this->known_challenges[challenge_index]->update_rating(atof(t.tokens[3]));
-    std::cout << "Well done! May the challenge be with you!";
+    std::cout << "Well done! May the challenge be with you!\n";
     
 
 }
-//TO-DO CHANGE
+
 void Core::list_challenge(const Tokens& t) {
-    std::cout << "Tag" << std::setw(30) << "Rating" << std::setw(15) << "Status" << std::setw(15) << "Total" << std::setw(15) << "Done\n";
+    std::cout << "Tag" << std::setw(30) << "Status" << std::setw(14) << "Rating" << std::setw(14) << "Total" << std::setw(15) << "Done\n";
     if (strcmp(t.tokens[1], "newest") == 0) {
-        std::cout << "Prints the challenges by newest added\n";
+        std::cout << "\tPrints the challenges by newest added\n";
         for (unsigned i = 0; i < this->challenges_size; i++)
         {
             this->known_challenges[i]->print_ch();
         }
     }else if (strcmp(t.tokens[1], "oldest") == 0) {
-        std::cout << "Prints the challenges by oldest added\n";
+        std::cout << "\tPrints the challenges by oldest added\n";
         for (int i = this->challenges_size - 1; i >= 0; i--)
         {
             this->known_challenges[i]->print_ch();
         }
     }else if (strcmp(t.tokens[1], "most_popular") == 0) {
-        std::cout << "Prints the challenges by which one is the most popular\n";
+        std::cout << "\tPrints the challenges by which one is the most popular\n";
         Challenge** sorted_challenge_list = new Challenge * [this->challenges_size];
         for (unsigned i = 0; i < this->challenges_size; i++)
         {
             sorted_challenge_list[i] = this->known_challenges[i];
         }
-        std::sort(sorted_challenge_list, sorted_challenge_list + this->challenges_size,
+        std::sort(sorted_challenge_list, sorted_challenge_list + this->challenges_size - 1,
             [](Challenge* a, Challenge* b) {
                 return a->get_times_called() >= b->get_times_called();
             });
@@ -301,6 +357,7 @@ void Core::list_challenge(const Tokens& t) {
         {
             sorted_challenge_list[i]->print_ch();
         }
+        delete[] sorted_challenge_list;
     }
 }
 
@@ -336,6 +393,7 @@ void Core::load_file(const Tokens& t)
             this->add_user(a);
             file_input.delete_memory();
         }
+        std::cout << "File with users loaded\n";
     }
     else if (strcmp(t.tokens[1] + t.size_of_token[1] - 3, "bin") == 0) {
         std::cout << "in bin file\n";
@@ -354,6 +412,7 @@ void Core::load_file(const Tokens& t)
             Challenge* ch = new Challenge(name, times_called, times_finished, rating);
             this->add_challenge_to_core(ch);
         }
+        std::cout << "File with challenges loaded\n";
     }
     else {
         std::cout << "Unrecognizable file.\nShould be with the .txt extention to add users, or .bin extention to add challenges\n";
@@ -363,10 +422,13 @@ void Core::load_file(const Tokens& t)
 
 void Core::print_users_by_given_name(const char* name) const
 {
+    unsigned curr = 1;
     for (unsigned i = 0; i < this->users_size; i++)
     {
         if (strcmp(this->users[i]->get_name(), name) == 0) {
+            std::cout << curr++ << ") ";
             this->users[i]->print();
+            std::cout << std::endl;
         }
     }
 }

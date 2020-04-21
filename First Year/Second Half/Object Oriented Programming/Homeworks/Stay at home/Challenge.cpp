@@ -6,6 +6,7 @@
 #include <cstring>
 #include <cassert>
 #include <iomanip>
+#include <cmath>
 #include "Challenge.h"
 
 const unsigned MAX_CHALLENGE_NAME_LENGTH = 32;
@@ -128,7 +129,12 @@ void Challenge::update_status()
 
 void Challenge::print_ch() const
 {
-    std::cout << this->name << std::setw(30) << this->status << std::setw(20) << this->rating << std::setw(20) << this->times_called << "\n";
+    std::cout << this->name 
+        << std::setw(30 - strlen(this->name)) 
+        << this->status << std::setw(15 - strlen(this->status)) 
+        << this->rating << std::setw(15 - (fabs((int)this->rating) / 10)) 
+        << this->times_called << std::setw(15 - (fabs((int)this->rating) / 10)) 
+        << this->times_completed << "\n";
 }
 
 #endif //! CHALLENGE_CPP
