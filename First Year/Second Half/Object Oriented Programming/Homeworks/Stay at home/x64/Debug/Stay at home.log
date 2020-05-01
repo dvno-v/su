@@ -1,0 +1,22 @@
+﻿  Challenge.cpp
+D:\Study\SU\First Year\Second Half\Object Oriented Programming\Homeworks\Stay at home\Challenge.cpp(135,41): warning C4244: 'argument': conversion from 'double' to 'std::streamsize', possible loss of data
+D:\Study\SU\First Year\Second Half\Object Oriented Programming\Homeworks\Stay at home\Challenge.cpp(136,47): warning C4244: 'argument': conversion from 'double' to 'std::streamsize', possible loss of data
+  Core.cpp
+D:\Study\SU\First Year\Second Half\Object Oriented Programming\Homeworks\Stay at home\Core.cpp(143,32): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+  main.cpp
+  Tokens.cpp
+D:\Study\SU\First Year\Second Half\Object Oriented Programming\Homeworks\Stay at home\Tokens.cpp(19,35): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+D:\Study\SU\First Year\Second Half\Object Oriented Programming\Homeworks\Stay at home\Tokens.cpp(20,28): warning C4018: '<': signed/unsigned mismatch
+  User.cpp
+D:\Study\SU\First Year\Second Half\Object Oriented Programming\Homeworks\Stay at home\User.cpp(42,56): warning C4311: 'reinterpret_cast': pointer truncation from 'User *' to 'unsigned long'
+D:\Study\SU\First Year\Second Half\Object Oriented Programming\Homeworks\Stay at home\User.cpp(42,56): warning C4302: 'reinterpret_cast': truncation from 'User *' to 'unsigned long'
+D:\Study\SU\First Year\Second Half\Object Oriented Programming\Homeworks\Stay at home\User.cpp(54,56): warning C4311: 'reinterpret_cast': pointer truncation from 'User *' to 'unsigned long'
+D:\Study\SU\First Year\Second Half\Object Oriented Programming\Homeworks\Stay at home\User.cpp(54,56): warning C4302: 'reinterpret_cast': truncation from 'User *' to 'unsigned long'
+D:\Study\SU\First Year\Second Half\Object Oriented Programming\Homeworks\Stay at home\User.cpp(66,56): warning C4311: 'reinterpret_cast': pointer truncation from 'User *' to 'unsigned long'
+D:\Study\SU\First Year\Second Half\Object Oriented Programming\Homeworks\Stay at home\User.cpp(66,56): warning C4302: 'reinterpret_cast': truncation from 'User *' to 'unsigned long'
+D:\Study\SU\First Year\Second Half\Object Oriented Programming\Homeworks\Stay at home\User.cpp(77,56): warning C4311: 'reinterpret_cast': pointer truncation from 'User *' to 'unsigned long'
+D:\Study\SU\First Year\Second Half\Object Oriented Programming\Homeworks\Stay at home\User.cpp(77,56): warning C4302: 'reinterpret_cast': truncation from 'User *' to 'unsigned long'
+D:\Study\SU\First Year\Second Half\Object Oriented Programming\Homeworks\Stay at home\User.cpp(86,56): warning C4311: 'reinterpret_cast': pointer truncation from 'User *' to 'unsigned long'
+D:\Study\SU\First Year\Second Half\Object Oriented Programming\Homeworks\Stay at home\User.cpp(86,56): warning C4302: 'reinterpret_cast': truncation from 'User *' to 'unsigned long'
+  Generating Code...
+  Stay at home.vcxproj -> D:\Study\SU\First Year\Second Half\Object Oriented Programming\Homeworks\Stay at home\x64\Debug\Stay at home.exe
