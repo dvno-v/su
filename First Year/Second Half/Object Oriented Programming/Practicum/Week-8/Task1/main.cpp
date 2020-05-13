@@ -10,6 +10,6 @@ int main(){
     Menu m;
     m.add_food(p);
     m.add_food(s);
-    m.print_cheapest();
+    (m.get_cheapest()) -> print();
     return 0;
 }
