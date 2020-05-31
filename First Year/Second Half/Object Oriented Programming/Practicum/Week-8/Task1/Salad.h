@@ -1,6 +1,6 @@
 #ifndef SALAD_H
 
-#define SALAD_HJ
+#define SALAD_H
 
 #include "Food.h"
 

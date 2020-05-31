@@ -3,6 +3,7 @@
 #define FOOD_H
 
 #include <string>
+#include <iostream>
 
 class Food
 {
@@ -27,6 +28,10 @@ public:
     std::string get_category() const ;
 
     void print() const;
+    void print_thats_good() const
+    {
+	    std::cout << "heey thats pretty good/n";
+    }
 };
 
 #endif // !FOOD_H

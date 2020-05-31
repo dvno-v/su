@@ -1,7 +1,7 @@
 #include <iostream>
-#include "Menu.h"
-#include "Pizza.h"
-#include "Salad.h"
+#include "Menu.cpp"
+#include "Pizza.cpp"
+#include "Salad.cpp"
 int main(){
     Pizza p("Margarita", "S domati", 13.5, 1300, 10, 10);
     Salad s("Salata", 13.10, 1400, 11, 11, 8, true);
